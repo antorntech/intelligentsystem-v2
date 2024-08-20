@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PageHeader from "../shared/PageHeader";
+import { Link } from "react-router-dom";
 
 const Training = () => {
   const alltrainings = [
@@ -77,9 +78,12 @@ const Training = () => {
                               alt=""
                             />
                             <div className="nft-box-btn-content">
-                              <a href="#0" className="nft-box-btn">
+                              <Link
+                                to={`/training/${currentTraining.id}`}
+                                className="nft-box-btn"
+                              >
                                 Explore <i className="fa fa-arrow-right"></i>
-                              </a>
+                              </Link>
                             </div>
                           </div>
                           <div className="nft-box-content">

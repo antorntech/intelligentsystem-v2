@@ -2,10 +2,10 @@ import React from "react";
 import PageHeader from "../shared/PageHeader";
 import { Link } from "react-router-dom";
 
-const ServiceDetails = () => {
+const TrainingDetails = () => {
   const service = {
-    title: "Skill Development Training",
-    image: "/images/collections/8.jpg",
+    title: "Responsive Website Development",
+    image: "/images/trainings/training2.jpg",
     author: "AM Antor",
     date: "September 17, 2022",
     category: "Skill Development Training",
@@ -66,7 +66,7 @@ const ServiceDetails = () => {
   ];
   return (
     <>
-      <PageHeader title="Service Details" />
+      <PageHeader title="Training Details" />
       <section className="blog">
         <div className="container">
           <div className="row">
@@ -193,4 +193,4 @@ const ServiceDetails = () => {
   );
 };
 
-export default ServiceDetails;
+export default TrainingDetails;

@@ -15,6 +15,7 @@ import PrivacyPolicy from "../pages/PrivacyPolicy";
 import HelpSupport from "../pages/HelpSupport";
 import TermsCondition from "../pages/TermsCondition";
 import SoftwareDetails from "../pages/SoftwareDetails";
+import TrainingDetails from "../pages/TrainingDetails";
 
 const AppRoutes = () => {
   return (
@@ -28,6 +29,7 @@ const AppRoutes = () => {
         <Route path="/software/:id" element={<SoftwareDetails />} />
         <Route path="/pricing" element={<Training />} />
         <Route path="/training" element={<Training />} />
+        <Route path="/training/:id" element={<TrainingDetails />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs/:id" element={<BlogDetails />} />
         <Route path="/about" element={<About />} />
