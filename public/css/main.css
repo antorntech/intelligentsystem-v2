@@ -997,6 +997,7 @@ select:-webkit-autofill:focus {
   background-color: #050828;
   padding-top: 120px;
   padding-bottom: 120px;
+  position: relative;
 }
 
 .services {
@@ -1296,6 +1297,18 @@ select:-webkit-autofill:focus {
   background-color: #050828;
   padding-top: 120px;
   padding-bottom: 120px;
+  position: relative;
+}
+
+.vector1 {
+  position: absolute;
+  top: 15%;
+  left: 12%;
+}
+.vector2 {
+  position: absolute;
+  bottom: 15%;
+  right: 12%;
 }
 
 .home-about p {
@@ -1626,6 +1639,7 @@ select:-webkit-autofill:focus {
   padding-top: 120px;
   padding-bottom: 120px;
   background-color: #050828;
+  position: relative;
 }
 
 .faq .card {

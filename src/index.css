@@ -221,3 +221,17 @@
     text-shadow: 0 0 10px rgb(9, 120, 194);
   }
 }
+
+/* about-vector-animation */
+.slide-top {
+  animation: slide-top 2s ease-in-out infinite alternate-reverse forwards;
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}

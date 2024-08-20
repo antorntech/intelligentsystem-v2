@@ -22,6 +22,18 @@ const HomePortfolio = () => {
   return (
     <>
       <section className="portfolio">
+        <div>
+          <img
+            src="/images/about-vector-1.png"
+            alt=""
+            className="vector1 slide-top"
+          />
+          <img
+            src="/images/about-vector-1.png"
+            alt=""
+            className="vector2 slide-top"
+          />
+        </div>
         <div data-aos="fade-up" data-aos-duration="1000" className="container">
           <div className="row">
             <div className="col-6">

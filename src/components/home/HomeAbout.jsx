@@ -5,6 +5,18 @@ const HomeAbout = () => {
   return (
     <>
       <section className="home-about">
+        <div>
+          <img
+            src="/images/about-vector-1.png"
+            alt=""
+            className="vector1 slide-top"
+          />
+          <img
+            src="/images/about-vector-1.png"
+            alt=""
+            className="vector2 slide-top"
+          />
+        </div>
         <div className="container">
           <h3 className="main-title text-white">
             About
