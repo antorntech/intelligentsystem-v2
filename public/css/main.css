@@ -2000,8 +2000,8 @@ select:-webkit-autofill:focus {
 }
 
 .contact .contact-boxes .contact-box {
-  background: rgba(255, 255, 255, 0.03);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: rgb(238 125 125 / 35%);
+  border: 2px solid rgba(112, 112, 112, 0.308);
   border-radius: 24px;
   padding: 20px;
 }
@@ -2022,14 +2022,14 @@ select:-webkit-autofill:focus {
 }
 
 .contact .contact-box .content-box h5 {
-  font-size: 16px;
-  color: #c3c0c0;
+  font-size: 18px;
+  color: #707070;
   font-weight: 500;
 }
 
 .contact .contact-box .content-box p {
   font-size: 18px;
-  color: #fff;
+  color: #050828;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
   margin-bottom: 0;
@@ -2045,9 +2045,9 @@ select:-webkit-autofill:focus {
 }
 
 .contact .contact-form .form-group .form-control {
-  background: transparent;
-  border: 1px solid #27344c;
-  color: #fff;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #27344c6c;
+  color: #050828;
   outline: none;
   box-shadow: none;
   border-radius: 4px;
@@ -2056,7 +2056,7 @@ select:-webkit-autofill:focus {
 }
 
 .contact .contact-form .form-group .form-control::placeholder {
-  color: #fff;
+  color: #05082888;
 }
 
 .contact .contact-form .form-group textarea.form-control {
