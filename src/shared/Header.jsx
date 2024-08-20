@@ -61,11 +61,7 @@ const Header = () => {
         <div className="header-inner">
           <div className="logo">
             <Link to="/">
-              <img
-                className="img-fluid"
-                src="/images/logo-black.png"
-                alt="Logo"
-              />
+              <img className="img-fluid" src="/images/logo.png" alt="Logo" />
             </Link>
           </div>
           <nav

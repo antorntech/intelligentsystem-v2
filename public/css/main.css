@@ -445,7 +445,7 @@ select:-webkit-autofill:focus {
   font-family: "Chakra Petch", sans-serif;
   position: relative;
   display: block;
-  color: #050828;
+  color: #fff;
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
@@ -745,7 +745,7 @@ select:-webkit-autofill:focus {
   top: -106px;
   left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #05082871;
   backdrop-filter: blur(15px);
   box-shadow: 0px 5px 9px rgb(0 0 0 / 11%), inset 0px 1px 0px #ebe9e9;
   opacity: 0;
@@ -2301,9 +2301,9 @@ select:-webkit-autofill:focus {
   position: relative;
   padding-top: 170px;
   padding-bottom: 110px;
-  color: #050828;
+  color: #fff;
   text-align: center;
-  background: #dfdfdf;
+  background: #050828;
   background-image: url(../images/footer-animation-bg.svg);
   background-size: cover;
   overflow: hidden;
