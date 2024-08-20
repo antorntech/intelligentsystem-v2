@@ -1,0 +1,223 @@
+/* extra css */
+.underline-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.underline-wrapper .underline-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #050828;
+}
+
+.underline-wrapper .underline-line {
+  width: 100px;
+  height: 1px;
+  background: #050828;
+}
+
+/*  */
+.banner-span {
+  animation: banner-span 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes banner-span {
+  0% {
+    letter-spacing: -0.5em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+/* section animation */
+.section-animation {
+  animation: section-animation 2s ease-in-out alternate both;
+}
+
+@keyframes section-animation {
+  0% {
+    transform: translateZ(0);
+  }
+  100% {
+    transform: translateZ(160px);
+  }
+}
+
+/*  */
+.slide-top {
+  animation: slide-top 1.5s linear infinite alternate-reverse backwards;
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+/*  */
+.focus-in-expand {
+  animation: focus-in-expand 2s ease-in-out infinite alternate-reverse both;
+}
+
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+/* another notfound-loader css */
+.notfound-loader {
+  display: inline-flex;
+  gap: 10px;
+}
+.notfound-loader:before,
+.notfound-loader:after {
+  content: "";
+  height: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(#222 0 0) top/100% 40% no-repeat,
+    radial-gradient(farthest-side, #000 95%, #0000) 50%/8px 8px no-repeat #fff;
+  animation: l7 1.5s infinite alternate ease-in;
+}
+@keyframes l7 {
+  0%,
+  70% {
+    background-size: 100% 40%, 8px 8px;
+  }
+  85% {
+    background-size: 100% 120%, 8px 8px;
+  }
+  100% {
+    background-size: 100% 40%, 8px 8px;
+  }
+}
+
+/* sponsors section style */
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.sponsor-logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: transparent;
+  white-space: nowrap;
+  position: relative;
+}
+
+.sponsor-logos:before,
+.sponsor-logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.sponsor-logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff);
+}
+
+.sponsor-logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
+}
+
+.sponsor-logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 3s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 80px;
+  margin: 0 40px;
+}
+
+/* help & support page style */
+.help-support {
+  padding-top: 120px;
+}
+
+.section-subtitle {
+  font-size: 2rem;
+  color: #6c757d;
+  margin-top: 10px;
+}
+
+.help-card {
+  background: rgba(255, 255, 255, 0.03);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 50px 30px;
+  border-radius: 24px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.help-card:hover {
+  border: 2px solid #f70361;
+  transform: translateY(-10px);
+}
+
+.help-card-text {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.help-card i {
+  background-image: linear-gradient(124deg, #f95a85, #f70361, #f95420);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.help-card .help-button {
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 24px;
+  background: linear-gradient(124deg, #f95a85, #f70361, #f95420);
+}
+
+/* text animation on help & support */
+.text-shadow-drop-center {
+  animation: text-shadow-drop-center 1s ease-in-out infinite alternate both;
+}
+
+@keyframes text-shadow-drop-center {
+  0% {
+    text-shadow: 0 0 0 transparent;
+  }
+  100% {
+    text-shadow: 0 0 10px rgb(9, 120, 194);
+  }
+}
