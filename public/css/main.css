@@ -2014,7 +2014,7 @@ select:-webkit-autofill:focus {
 
 .contact {
   position: relative;
-  padding-top: 120px;
+  padding: 120px 0;
 }
 
 .contact .contact-boxes {
