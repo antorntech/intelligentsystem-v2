@@ -1529,8 +1529,8 @@ select:-webkit-autofill:focus {
 }
 
 .teams .team-item {
-  background: rgba(255, 255, 255, 0.03);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: rgb(60 48 48 / 11%);
+  border: 2px solid rgb(50 48 48 / 16%);
   color: #fff;
   border-radius: 24px;
   padding: 20px 15px;
@@ -1560,7 +1560,7 @@ select:-webkit-autofill:focus {
   display: inline-block;
   font-size: 20px;
   font-weight: 600;
-  color: #fff;
+  color: #050828;
   margin-top: 8px;
   letter-spacing: 0.4px;
 }
@@ -1568,20 +1568,26 @@ select:-webkit-autofill:focus {
 .teams .team-item .team-item-artist-info p {
   font-size: 14px;
   margin-bottom: 0;
-  color: #bbbbbb !important;
+  color: #707070 !important;
 }
 
 .teams .team-item .team-underline {
   width: 100%;
   height: 1px;
-  background: linear-gradient(124deg, #f95a85, #f70361, #f95420);
+  background: #4b4b4b;
   margin: 20px 0;
+}
+
+.teams .team-item:hover .team-underline {
+  background: linear-gradient(124deg, #f95a85, #f70361, #f95420);
+  width: 100%;
+  height: 1px;
 }
 
 .teams .team-item .media-icons a {
   border: #4b4b4b 1px solid;
   border-radius: 5px;
-  color: #fff;
+  color: #707070;
   display: inline-block;
   font-size: 14px;
   height: 40px;
@@ -1595,6 +1601,7 @@ select:-webkit-autofill:focus {
 }
 
 .teams .team-item .media-icons a:hover {
+  color: #fff;
   background: linear-gradient(124deg, #f95a85, #f70361, #f95420);
   border: 1px solid transparent;
 }
