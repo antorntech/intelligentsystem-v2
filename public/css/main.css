@@ -450,7 +450,7 @@ select:-webkit-autofill:focus {
   font-weight: 700;
   line-height: 24px;
   text-transform: uppercase;
-  padding-right: 21px;
+  padding-right: 15px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
