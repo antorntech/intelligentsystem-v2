@@ -7,6 +7,7 @@ import HomeBlog from "../components/home/HomeBlog";
 import HomeSponsor from "../components/home/HomeSponsor";
 import HomeFaqs from "../components/home/HomeFaqs";
 import AnimatedSlider from "../animated-slider/AnimatedSlider";
+import HomeContact from "../components/home/HomeContact";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <HomeSponsor />
       <HomeFaqs />
       <HomeBlog />
+      <HomeContact />
     </>
   );
 };

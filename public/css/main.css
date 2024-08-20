@@ -698,7 +698,7 @@ select:-webkit-autofill:focus {
 .header .header-inner .mobile-button:before,
 .header .header-inner .mobile-button:after,
 .header .header-inner .mobile-button span {
-  background-color: #050828;
+  background-color: #ffffff;
   -webkit-transition: all ease 0.3s;
   -moz-transition: all ease 0.3s;
   transition: all ease 0.3s;
@@ -1729,6 +1729,7 @@ select:-webkit-autofill:focus {
 
 .blog {
   padding-top: 120px;
+  margin-bottom: 50px;
 }
 
 .blog .blog-items .blog-item {
@@ -2117,7 +2118,6 @@ select:-webkit-autofill:focus {
 
 .footer {
   background: #040722;
-  margin-top: 120px;
   border-top: 1px solid #0b0e28;
 }
 
