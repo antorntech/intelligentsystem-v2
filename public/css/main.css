@@ -624,10 +624,9 @@ select:-webkit-autofill:focus {
   background: linear-gradient(124deg, #f95a85, #f70361, #f95420);
   color: #fff;
   font-weight: 700;
-  text-transform: uppercase;
-  padding: 8px 30px;
+  padding: 5px 15px;
   margin-left: auto;
-  height: 48px;
+  height: 42px;
   border: none;
   border-radius: 30px;
   -webkit-transition: all 0.3s ease;
@@ -1303,12 +1302,12 @@ select:-webkit-autofill:focus {
 .vector1 {
   position: absolute;
   top: 15%;
-  left: 12%;
+  left: 5%;
 }
 .vector2 {
   position: absolute;
   bottom: 15%;
-  right: 12%;
+  right: 5%;
 }
 
 .home-about p {
