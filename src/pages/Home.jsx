@@ -9,6 +9,7 @@ import HomeFaqs from "../components/home/HomeFaqs";
 import AnimatedSlider from "../animated-slider/AnimatedSlider";
 import HomeContact from "../components/home/HomeContact";
 import HomeVideo from "../components/home/HomeVideo";
+import HomeCustomerSay from "../components/home/HomeCustomerSay";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       <HomeFaqs />
       <HomeBlog />
       <HomeVideo />
+      <HomeCustomerSay />
       <HomeContact />
     </>
   );

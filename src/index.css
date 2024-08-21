@@ -396,3 +396,32 @@
     font-size: 1rem;
   }
 }
+
+/* home-review */
+.customer-say {
+  padding-top: 120px;
+}
+.home-customer-say-reviews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.home-customer-say-reviews .home-customer-say-review {
+  border: 1px solid #acacac;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.home-customer-say-title p {
+  font-size: 1.2rem;
+  color: #8a8a8a;
+  margin: 0;
+}
+
+.home-customer-say-title h1 {
+  font-size: 3rem;
+  color: #050828;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
