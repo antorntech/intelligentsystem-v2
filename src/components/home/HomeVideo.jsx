@@ -37,7 +37,11 @@ const HomeVideo = () => {
 
   return (
     <>
-      <div className="home-video-container">
+      <div
+        className="home-video-container"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <div className="overlay">
           <h1 className="heading">{headings[currentHeadingIndex]}</h1>
           <p className="subheading">Discover the possibilities</p>
