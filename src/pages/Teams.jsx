@@ -7,7 +7,7 @@ const Teams = () => {
     {
       id: 1,
       name: "Mr. Kamal",
-      image: "https://ui-avatars.com/api/?name=Mr+Kamal",
+      image: "https://ui-avatars.com/api/?name=Mr+Kamal&color=787a9e",
       position: "Chief Executive Officer",
       facebookLink: "https://www.facebook.com/",
       twitterLink: "https://twitter.com/",
@@ -17,7 +17,7 @@ const Teams = () => {
     {
       id: 2,
       name: "Mrs. Rotna",
-      image: "https://ui-avatars.com/api/?name=Mrs+Rotna",
+      image: "https://ui-avatars.com/api/?name=Mrs+Rotna&color=787a9e",
       position: "Chief Operating Officer",
       facebookLink: "https://www.facebook.com/",
       twitterLink: "https://twitter.com/",
@@ -27,7 +27,7 @@ const Teams = () => {
     {
       id: 3,
       name: "Mr. Jakir",
-      image: "https://ui-avatars.com/api/?name=Mr+Jakir",
+      image: "https://ui-avatars.com/api/?name=Mr+Jakir&color=787a9e",
       position: "Chief Technical Officer",
       facebookLink: "https://www.facebook.com/",
       twitterLink: "https://twitter.com/",
@@ -37,14 +37,14 @@ const Teams = () => {
     {
       id: 4,
       name: "Mr. Jamil",
-      image: "https://ui-avatars.com/api/?name=Mr+Jamil",
+      image: "https://ui-avatars.com/api/?name=Mr+Jamil&color=787a9e",
       position: "Chief Financial Officer",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     {
       id: 5,
       name: "Mr. Mohon",
-      image: "https://ui-avatars.com/api/?name=Mr+Mohon",
+      image: "https://ui-avatars.com/api/?name=Mr+Mohon&color=787a9e",
       position: "Chief Marketing Officer",
       facebookLink: "https://www.facebook.com/",
       twitterLink: "https://twitter.com/",
@@ -54,7 +54,7 @@ const Teams = () => {
     {
       id: 6,
       name: "Mrs. Zakia",
-      image: "https://ui-avatars.com/api/?name=Mrs+Zakia",
+      image: "https://ui-avatars.com/api/?name=Mrs+Zakia&color=787a9e",
       position: "Chief Legal Officer",
       facebookLink: "https://www.facebook.com/",
       twitterLink: "https://twitter.com/",
