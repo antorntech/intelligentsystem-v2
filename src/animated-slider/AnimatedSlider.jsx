@@ -25,7 +25,7 @@ const sliderData = [
 ];
 
 // Adjust this value to extend slide duration
-const AUTO_SLIDE_INTERVAL = 7000; // Duration in milliseconds (e.g., 7000ms = 7 seconds)
+const AUTO_SLIDE_INTERVAL = 5000;
 
 const AnimatedSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -64,7 +64,7 @@ const AnimatedSlider = () => {
                 index === currentIndex ? "show" : ""
               }`}
             >
-              <h2 className="slide-heading">{slide.heading}</h2>
+              <h2 className="slide-heading banner-heading">{slide.heading}</h2>
               <p className="slide-description">{slide.description}</p>
               <Link to="/services" className="main-btn">
                 Learn More <i className="fa fa-arrow-right"></i>
