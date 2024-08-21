@@ -32,9 +32,12 @@ const ScrollTop = () => {
       className={`scroll-top ${isActive ? "active" : ""}`}
       onClick={scrollToTop}
     >
-      <span>
-        <i className="fa fa-arrow-up"></i>
-      </span>
+      <lord-icon
+        src="https://cdn.lordicon.com/dwoxxgps.json"
+        trigger="loop"
+        colors="primary:#ffffff"
+        style={{ width: "40px", height: "40px" }}
+      ></lord-icon>
     </a>
   );
 };

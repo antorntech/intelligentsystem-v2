@@ -2300,15 +2300,17 @@ select:-webkit-autofill:focus {
   position: fixed;
   bottom: 107%;
   right: 25px;
-  width: 45px;
-  height: 45px;
-  line-height: 45px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   font-size: 18px;
   text-align: center;
   color: #fff !important;
-  background: #040722;
-  border: 1px solid #121534;
+  background-color: #050828;
   border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 999;
   -webkit-transition: all 0.7s linear;
   -moz-transition: all 0.7s linear;
@@ -2320,10 +2322,6 @@ select:-webkit-autofill:focus {
 
 .scroll-top.active {
   bottom: 25px;
-}
-
-.scroll-top:hover {
-  background: linear-gradient(124deg, #f95a85, #f70361, #f95420);
 }
 
 /* --------------------------------------
