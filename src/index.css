@@ -402,6 +402,10 @@
   .subheading {
     font-size: 1rem;
   }
+
+  .music-icon {
+    padding: 10px;
+  }
 }
 
 /* home-review */
