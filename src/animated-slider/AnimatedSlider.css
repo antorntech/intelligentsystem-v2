@@ -71,17 +71,21 @@
   margin: 0 auto;
   margin-bottom: 20px;
   animation: fadeInUp 1s ease-in-out;
-  animation-delay: 0.5s;
 }
 
-.slide-button {
-  font-size: 1rem;
-  padding: 4px 15px;
-  background-color: #f81a6b;
+.slide-content .slide-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.2rem;
+  padding: 5px 15px;
+  background-color: transparent;
+  border-bottom: 1px solid #199bff;
   color: white;
-  border: none;
   border-radius: 5px;
   cursor: pointer;
+  animation: fadeInUp 1s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 
 .swiper-button-prev,
@@ -104,7 +108,7 @@
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  background: linear-gradient(124deg, #f95a85, #f70361, #f95420);
+  background: linear-gradient(124deg, #5a9ff9, #199bff, #f9bf20);
 }
 
 .swiper-button-prev {

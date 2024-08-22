@@ -66,8 +66,15 @@ const AnimatedSlider = () => {
             >
               <h2 className="slide-heading banner-heading">{slide.heading}</h2>
               <p className="slide-description">{slide.description}</p>
-              <Link to="/services" className="main-btn">
-                Learn More <i className="fa fa-arrow-right"></i>
+              <Link to="/services" className="slide-button">
+                <span>Learn More</span>
+                <lord-icon
+                  src="https://cdn.lordicon.com/vduvxizq.json"
+                  trigger="loop"
+                  delay="2000"
+                  colors="primary:#ffffff"
+                  style={{ width: "30px", height: "30px" }}
+                ></lord-icon>
               </Link>
             </div>
           </div>
