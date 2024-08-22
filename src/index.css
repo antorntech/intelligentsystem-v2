@@ -400,28 +400,114 @@
 /* home-review */
 .customer-say {
   padding-top: 120px;
-}
-.home-customer-say-reviews {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  position: relative;
 }
 
-.home-customer-say-reviews .home-customer-say-review {
-  border: 1px solid #acacac;
+.home-customer-say-review-box {
+  padding: 20px 30px;
+  margin: 0 10px;
   border-radius: 5px;
-  padding: 30px;
+  border: 1px solid #acacac;
 }
 
-.home-customer-say-title p {
-  font-size: 1.2rem;
-  color: #8a8a8a;
-  margin: 0;
+.home-customer-say-title span {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 1000;
+  position: relative;
+  -webkit-text-stroke: 2px black;
+}
+
+.home-customer-say-title span::before {
+  border: none;
+  overflow: hidden;
+  color: #c2c2c2;
+  position: absolute;
+  content: "Testimonials";
+  animation: filling 5s linear infinite;
+}
+
+.next-arrow {
+  top: -35%;
+  right: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  background-color: #050828;
+  transition: all ease-in-out 0.4s;
+}
+
+.prev-arrow {
+  top: -35%;
+  right: 5%;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  display: flex;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  background-color: #050828;
+  transition: all ease-in-out 0.4s;
+}
+
+.next-arrow:hover,
+.prev-arrow:hover {
+  background-color: #f81a6b;
+}
+
+.home-customer-say-review-content p {
+  color: #7e7e7e;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+@keyframes filling {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
 }
 
 .home-customer-say-title h1 {
-  font-size: 3rem;
   color: #050828;
-  font-weight: bold;
+  font-weight: 1000;
+  font-size: 3.5rem;
   margin-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .home-customer-say-title h1 {
+    font-size: 1.5rem;
+  }
+
+  .home-customer-say-title p {
+    font-size: 0.8rem;
+  }
+
+  .home-customer-say-reviews {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .next-arrow {
+    top: -30%;
+  }
+
+  .prev-arrow {
+    top: -30%;
+    right: 55px;
+  }
 }
