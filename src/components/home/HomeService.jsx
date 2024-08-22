@@ -59,7 +59,7 @@ const HomeService = () => {
           </h3>
           <div className="row">
             {services.map((service) => (
-              <div key={service.id} className="col-lg-4 col-md-6 item mb-4">
+              <div key={service.id} className="col-lg-4 col-md-6 item mb-lg-4">
                 <div className="nft-box">
                   <div className="nft-box-thumb">
                     <img className="img-fluid" src={service.banner} alt="" />

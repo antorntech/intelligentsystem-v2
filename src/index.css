@@ -304,11 +304,15 @@
   }
 
   .home-contact .sub-title {
-    font-size: 0.5rem;
+    font-size: 1rem;
   }
 
   .home-contact .contact-main-title {
     font-size: 1rem;
+  }
+
+  .home-contact .description {
+    width: 100%;
   }
 }
 
