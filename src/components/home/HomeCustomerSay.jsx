@@ -102,7 +102,11 @@ const HomeCustomerSay = () => {
   };
 
   return (
-    <section className="customer-say">
+    <section
+      className="customer-say"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <div className="container">
         <div className="home-customer-say">
           <div className="home-customer-say-content">
