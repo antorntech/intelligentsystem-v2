@@ -22,7 +22,7 @@ const HelpSupport = () => {
                   <lord-icon
                     src="https://cdn.lordicon.com/nzixoeyk.json"
                     trigger="loop"
-                    colors="primary:#ffffff"
+                    colors="primary:#050828"
                     style={{ width: "50px", height: "50px" }}
                   ></lord-icon>
                   <h5 className="help-card-title">Email Support</h5>
@@ -42,7 +42,7 @@ const HelpSupport = () => {
                     src="https://cdn.lordicon.com/rsvfayfn.json"
                     trigger="loop"
                     delay="2000"
-                    colors="primary:#ffffff"
+                    colors="primary:#050828"
                     style={{ width: "50px", height: "50px" }}
                   ></lord-icon>
                   <h5 className="help-card-title">Phone Support</h5>
@@ -62,7 +62,7 @@ const HelpSupport = () => {
                     src="https://cdn.lordicon.com/fdxqrdfe.json"
                     trigger="loop"
                     delay="2000"
-                    colors="primary:#ffffff"
+                    colors="primary:#050828"
                     style={{ width: "50px", height: "50px" }}
                   ></lord-icon>
                   <h5 className="help-card-title">Live Chat</h5>

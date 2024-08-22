@@ -162,6 +162,7 @@
 /* help & support page style */
 .help-support {
   padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .section-subtitle {
@@ -173,7 +174,7 @@
 .help-card {
   background: rgba(255, 255, 255, 0.03);
   color: #fff;
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid rgb(0 0 0 / 19%);
   padding: 50px 30px;
   border-radius: 24px;
   -webkit-transition: all 0.3s ease;
@@ -186,6 +187,12 @@
 .help-card:hover {
   border: 2px solid #f70361;
   transform: translateY(-10px);
+}
+
+.help-card-title {
+  font-size: 1.5rem;
+  color: #050828;
+  margin-bottom: 20px;
 }
 
 .help-card-text {
@@ -218,7 +225,7 @@
     text-shadow: 0 0 0 transparent;
   }
   100% {
-    text-shadow: 0 0 10px rgb(9, 120, 194);
+    text-shadow: 0 0 10px rgb(13, 105, 121);
   }
 }
 
