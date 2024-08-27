@@ -38,7 +38,7 @@ const SoftwareDetails = () => {
   ];
   return (
     <>
-      <PageHeader title="Blog Details" />
+      <PageHeader title="Software Details" />
       <section className="blog animate__animated animate__fadeIn">
         <div className="container">
           <div className="row">
