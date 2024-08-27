@@ -30,11 +30,12 @@ const HomeAbout = () => {
             data-aos-duration="1000"
             className="row align-items-center"
           >
-            <div className="col-12 col-lg-6">
+            <div className="col-12 col-lg-6" style={{ borderRadius: "10px" }}>
               <img
                 src="/images/home-about.jpg"
                 alt=""
                 className="img-fluid w-100 p-1 bg-white"
+                style={{ borderRadius: "10px" }}
               />
             </div>
             <div className="col-12 col-lg-6 pt-4 pt-lg-0">
