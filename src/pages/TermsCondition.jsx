@@ -10,17 +10,18 @@ const TermsCondition = () => {
         <div className="container">
           <div>
             <p>
-              Welcome to Intelligent-System! These terms and conditions outline
-              the rules and regulations for the use of our Software Development
-              and IT Training Institute's website.
+              Welcome to Intelligent-Systems & Solutions Limiteds & Solutions
+              Limited! These terms and conditions outline the rules and
+              regulations for the use of our Software Development and IT
+              Training Institute's website.
             </p>
 
             <h4 className="mt-4">1. Introduction</h4>
             <p>
               By accessing this website, you agree to comply with and be bound
               by the following terms and conditions of use, which together with
-              our privacy policy govern Intelligent-System's relationship with
-              you in relation to this website.
+              our privacy policy govern Intelligent-Systems & Solutions
+              Limited's relationship with you in relation to this website.
             </p>
 
             <h4 className="mt-4">2. Use of the Website</h4>
@@ -36,9 +37,10 @@ const TermsCondition = () => {
             <h4 className="mt-4">3. Intellectual Property</h4>
             <p>
               All intellectual property rights in the content and materials on
-              this website are owned by or licensed to Intelligent-System. You
-              may view, download, and print pages from the website for your own
-              personal use, subject to the restrictions set out below.
+              this website are owned by or licensed to Intelligent-Systems &
+              Solutions Limited. You may view, download, and print pages from
+              the website for your own personal use, subject to the restrictions
+              set out below.
             </p>
             <ul className="mt-4">
               <div className="d-flex align-items-start mb-2">
@@ -73,11 +75,11 @@ const TermsCondition = () => {
 
             <h4 className="mt-4">5. Limitation of Liability</h4>
             <p>
-              Intelligent-System will not be liable for any loss or damage,
-              including without limitation, indirect or consequential loss or
-              damage, or any loss or damage whatsoever arising from loss of data
-              or profits arising out of, or in connection with, the use of this
-              website.
+              Intelligent-Systems & Solutions Limited will not be liable for any
+              loss or damage, including without limitation, indirect or
+              consequential loss or damage, or any loss or damage whatsoever
+              arising from loss of data or profits arising out of, or in
+              connection with, the use of this website.
             </p>
 
             <h4 className="mt-4">6. Governing Law</h4>

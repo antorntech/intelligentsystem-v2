@@ -587,4 +587,19 @@
     padding-top: 50px;
     padding-bottom: 10px;
   }
+
+  .help-support {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .terms-condition {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .privacy-policy {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
