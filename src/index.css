@@ -202,7 +202,7 @@
 }
 
 .help-card i {
-  background-image: linear-gradient(124deg, #f95a85, #199bff, #f95420);
+  background-image: linear-gradient(-124deg, #f9bf20, #0b7ed6, #074ba3);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -524,5 +524,20 @@
   .prev-arrow {
     top: -30%;
     right: 55px;
+  }
+}
+
+.text-focus-in {
+  animation: text-focus-in 1s ease-in-out alternate both;
+}
+
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
   }
 }

@@ -157,10 +157,10 @@ const Blogs = () => {
                     <div className="col-12 text-center">
                       <div className="notfound-loader"></div>
                       <p
-                        className="text-white focus-in-expand"
+                        className="text-black text-focus-in"
                         style={{ marginTop: "10px", fontSize: "20px" }}
                       >
-                        No blogs found
+                        No Blogs Found
                       </p>
                     </div>
                   )}

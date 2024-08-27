@@ -110,10 +110,10 @@ const Training = () => {
                     <div className="col-12 text-center">
                       <div className="notfound-loader"></div>
                       <p
-                        className="text-white focus-in-expand"
+                        className="text-black text-focus-in"
                         style={{ marginTop: "10px", fontSize: "20px" }}
                       >
-                        No Training found
+                        No Training Found
                       </p>
                     </div>
                   )}
