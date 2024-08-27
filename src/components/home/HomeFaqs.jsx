@@ -11,28 +11,28 @@ const HomeFaqs = () => {
     {
       id: "collapseOne",
       heading: "headingOne",
-      question: "What are the Marceline?",
+      question: "What are the ISSL?",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
     },
     {
       id: "collapseTwo",
       heading: "headingTwo",
-      question: "How do I get Marceline?",
+      question: "How do I get ISSL?",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
     },
     {
       id: "collapseThree",
       heading: "headingThree",
-      question: "How can we buy and invest in Marceline?",
+      question: "How can we buy and invest in ISSL?",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
     },
     {
       id: "collapseFour",
       heading: "headingFour",
-      question: "Where can we buy and sell Marceline?",
+      question: "Where can we buy and sell ISSL?",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
     },

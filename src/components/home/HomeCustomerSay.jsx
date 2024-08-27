@@ -29,7 +29,7 @@ const HomeCustomerSay = () => {
       designation: "CEO",
       image: "/images/customer-logo/1.png",
       description:
-        "“Marceline are always accommodating our diverse needs and we feel like they are a part of our Company rather than an external supplier”",
+        "“ISSL are always accommodating our diverse needs and we feel like they are a part of our Company rather than an external supplier”",
     },
     {
       id: 2,
@@ -37,7 +37,7 @@ const HomeCustomerSay = () => {
       designation: "CFO",
       image: "/images/customer-logo/2.png",
       description:
-        "“Marceline are always accommodating our diverse needs and we feel like they are a part of our Company rather than an external supplier”",
+        "“ISSL are always accommodating our diverse needs and we feel like they are a part of our Company rather than an external supplier”",
     },
     {
       id: 3,
@@ -45,7 +45,7 @@ const HomeCustomerSay = () => {
       designation: "CTO",
       image: "/images/customer-logo/3.png",
       description:
-        "“Marceline are always accommodating our diverse needs and we feel like they are a part of our Company rather than an external supplier”",
+        "“ISSL are always accommodating our diverse needs and we feel like they are a part of our Company rather than an external supplier”",
     },
     {
       id: 4,
@@ -53,7 +53,7 @@ const HomeCustomerSay = () => {
       designation: "CMO",
       image: "/images/customer-logo/4.png",
       description:
-        "“Marceline are always accommodating our diverse needs and we feel like they are a part of our Company rather than an external supplier”",
+        "“ISSL are always accommodating our diverse needs and we feel like they are a part of our Company rather than an external supplier”",
     },
     {
       id: 5,
@@ -61,7 +61,7 @@ const HomeCustomerSay = () => {
       designation: "COO",
       image: "/images/customer-logo/5.png",
       description:
-        "“Marceline are always accommodating our diverse needs and we feel like they are a part of our Company rather than an external supplier”",
+        "“ISSL are always accommodating our diverse needs and we feel like they are a part of our Company rather than an external supplier”",
     },
   ];
 
