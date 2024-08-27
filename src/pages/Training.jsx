@@ -89,7 +89,9 @@ const Training = () => {
                           <div className="nft-box-content">
                             <div className="nft-box-title-wrap d-flex align-items-center justify-content-between">
                               <h3 className="nft-box-title">
-                                <a href="#0">{currentTraining.title}</a>
+                                <Link to={`/training/${currentTraining.id}`}>
+                                  {currentTraining.title}
+                                </Link>
                               </h3>
                               <div className="nft-box-trending-icon">
                                 <span>
