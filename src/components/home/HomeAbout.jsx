@@ -38,7 +38,7 @@ const HomeAbout = () => {
               />
             </div>
             <div className="col-12 col-lg-6 pt-4 pt-lg-0">
-              <p className="mb-3 text-justify">
+              <p className="mb-3 text-white">
                 Intelligent Systems & Solutions Limited is a rapidly expanding
                 offshore and onshore software development, skill development,
                 and outsourcing company based in Bangladesh. We specialize in
