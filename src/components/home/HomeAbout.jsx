@@ -39,15 +39,15 @@ const HomeAbout = () => {
             </div>
             <div className="col-12 col-lg-6 pt-4 pt-lg-0">
               <p className="mb-3 text-justify">
-                Marcline LTD is a rapidly expanding offshore and onshore
-                software development, skill development, and outsourcing company
-                based in Bangladesh. We specialize in delivering global systems
-                and solutions while ensuring top-notch customer service. Our
-                core competencies include technology solutions, desktop
-                applications, web applications, mobile applications, business
-                solutions, engineering solutions, system upgrades, system
-                implementation, system development, training, and other
-                essential services.
+                Intelligent Systems & Solutions Limited is a rapidly expanding
+                offshore and onshore software development, skill development,
+                and outsourcing company based in Bangladesh. We specialize in
+                delivering global systems and solutions while ensuring top-notch
+                customer service. Our core competencies include technology
+                solutions, desktop applications, web applications, mobile
+                applications, business solutions, engineering solutions, system
+                upgrades, system implementation, system development, training,
+                and other essential services.
               </p>
               <Link to="/about" className="main-btn">
                 <i className="fa fa-rocket"></i> <span>Read More</span>
