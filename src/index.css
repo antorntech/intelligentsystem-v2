@@ -541,3 +541,50 @@
     opacity: 1;
   }
 }
+
+/* responsiveness for all sections */
+@media screen and (max-width: 768px) {
+  .home-about {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .services {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .portfolio {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .about {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .sponsors {
+    padding-top: 0px;
+    padding-bottom: 50px;
+  }
+
+  .faq {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .blog {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .customer-say {
+    padding-top: 50px;
+  }
+
+  .footer .footer-top {
+    padding-top: 50px;
+    padding-bottom: 10px;
+  }
+}

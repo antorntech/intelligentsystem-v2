@@ -76,8 +76,9 @@ const Footer = () => {
           <div className="container">
             <div className="copyright d-flex align-items-center justify-content-md-between flex-sm-wrap justify-content-sm-center">
               <p>
-                Copyright &copy; {year}, <span>Marceline</span> Intelligent
-                System All Rights Reserved.
+                Copyright &copy; {year},{" "}
+                <span>Intelligent Systems & Solutions Limited</span> - All
+                Rights Reserved.
               </p>
               <ul className="list-unstyled social-media d-flex align-items-center">
                 <li>

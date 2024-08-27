@@ -6,7 +6,7 @@ const HomeBlog = () => {
     <>
       {/* <!-- ========== Start Blog ========== --> */}
 
-      <section className="blog" style={{ paddingBottom: "120px" }}>
+      <section className="blog">
         <div data-aos="fade-up" data-aos-duration="1000" className="container">
           <div className="row">
             <div className="col-6">
