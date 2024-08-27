@@ -32,7 +32,7 @@ const HomeAbout = () => {
           >
             <div className="col-12 col-lg-6">
               <img
-                src="/images/marceline.png"
+                src="/images/home-about.jpg"
                 alt=""
                 className="img-fluid w-100 p-1 bg-white"
               />
