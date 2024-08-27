@@ -10,10 +10,9 @@ const TermsCondition = () => {
         <div className="container">
           <div>
             <p>
-              Welcome to Intelligent-Systems & Solutions Limiteds & Solutions
-              Limited! These terms and conditions outline the rules and
-              regulations for the use of our Software Development and IT
-              Training Institute's website.
+              Welcome to Intelligent Systems & Solutions Limited! These terms
+              and conditions outline the rules and regulations for the use of
+              our Software Development and IT Training Institute's website.
             </p>
 
             <h4 className="mt-4">1. Introduction</h4>
