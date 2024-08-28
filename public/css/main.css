@@ -2392,7 +2392,7 @@ select:-webkit-autofill:focus {
 }
 
 .breadcrumb-area ul li:last-child {
-  color: #fff;
+  color: #d8d8d8cc;
   padding-right: 0;
   margin-right: 0;
 }
@@ -2921,6 +2921,15 @@ select:-webkit-autofill:focus {
 @media (max-width: 767.98px) {
   .main-title {
     margin-bottom: 55px;
+  }
+
+  .breadcrumb-area {
+    padding-top: 150px;
+    padding-bottom: 80px;
+  }
+
+  .breadcrumb-area .breadcrumb-title {
+    font-size: 35px;
   }
 
   /*----- Home ----*/
