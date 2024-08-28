@@ -16,15 +16,25 @@ const PrivacyPolicy = () => {
             </p>
             <ul className="mt-4">
               <div className="d-flex align-items-start mb-2">
-                <img src="/images/icons/checked.png" alt="" className="mr-2" />
-                <li className="m-0">
+                <lord-icon
+                  src="https://cdn.lordicon.com/oqdmuxru.json"
+                  trigger="loop"
+                  colors="primary:#30c9e8"
+                  style={{ width: "25px", height: "25px" }}
+                ></lord-icon>
+                <li className="m-0 ml-2">
                   Information you give us. For example, a name, email address,
                   or other details.
                 </li>
               </div>
               <div className="d-flex align-items-start mb-2">
-                <img src="/images/icons/checked.png" alt="" className="mr-2" />
-                <li className="m-0">
+                <lord-icon
+                  src="https://cdn.lordicon.com/oqdmuxru.json"
+                  trigger="loop"
+                  colors="primary:#30c9e8"
+                  style={{ width: "25px", height: "25px" }}
+                ></lord-icon>
+                <li className="m-0 ml-2">
                   Information we get from your use of our services. For example,
                   device information, location, and browsing history.
                 </li>
@@ -35,18 +45,33 @@ const PrivacyPolicy = () => {
             <p>The information we collect is used to:</p>
             <ul className="mt-4">
               <div className="d-flex align-items-start mb-2">
-                <img src="/images/icons/checked.png" alt="" className="mr-2" />
-                <li className="m-0">
+                <lord-icon
+                  src="https://cdn.lordicon.com/oqdmuxru.json"
+                  trigger="loop"
+                  colors="primary:#30c9e8"
+                  style={{ width: "25px", height: "25px" }}
+                ></lord-icon>
+                <li className="m-0 ml-2">
                   Provide, maintain, and improve our services.
                 </li>
               </div>
               <div className="d-flex align-items-start mb-2">
-                <img src="/images/icons/checked.png" alt="" className="mr-2" />
-                <li className="m-0">Offer personalized content.</li>
+                <lord-icon
+                  src="https://cdn.lordicon.com/oqdmuxru.json"
+                  trigger="loop"
+                  colors="primary:#30c9e8"
+                  style={{ width: "25px", height: "25px" }}
+                ></lord-icon>
+                <li className="m-0 ml-2">Offer personalized content.</li>
               </div>
               <div className="d-flex align-items-start mb-2">
-                <img src="/images/icons/checked.png" alt="" className="mr-2" />
-                <li className="m-0">
+                <lord-icon
+                  src="https://cdn.lordicon.com/oqdmuxru.json"
+                  trigger="loop"
+                  colors="primary:#30c9e8"
+                  style={{ width: "25px", height: "25px" }}
+                ></lord-icon>
+                <li className="m-0 ml-2">
                   Communicate with you about updates and other services.
                 </li>
               </div>
@@ -60,18 +85,33 @@ const PrivacyPolicy = () => {
             </p>
             <ul className="mt-4">
               <div className="d-flex align-items-start mb-2">
-                <img src="/images/icons/checked.png" alt="" className="mr-2" />
-                <li className="m-0">With your consent.</li>
+                <lord-icon
+                  src="https://cdn.lordicon.com/oqdmuxru.json"
+                  trigger="loop"
+                  colors="primary:#30c9e8"
+                  style={{ width: "25px", height: "25px" }}
+                ></lord-icon>
+                <li className="m-0 ml-2">With your consent.</li>
               </div>
               <div className="d-flex align-items-start mb-2">
-                <img src="/images/icons/checked.png" alt="" className="mr-2" />
-                <li className="m-0">
+                <lord-icon
+                  src="https://cdn.lordicon.com/oqdmuxru.json"
+                  trigger="loop"
+                  colors="primary:#30c9e8"
+                  style={{ width: "25px", height: "25px" }}
+                ></lord-icon>
+                <li className="m-0 ml-2">
                   For external processing by trusted businesses or persons.
                 </li>
               </div>
               <div className="d-flex align-items-start mb-2">
-                <img src="/images/icons/checked.png" alt="" className="mr-2" />
-                <li className="m-0">For legal reasons.</li>
+                <lord-icon
+                  src="https://cdn.lordicon.com/oqdmuxru.json"
+                  trigger="loop"
+                  colors="primary:#30c9e8"
+                  style={{ width: "25px", height: "25px" }}
+                ></lord-icon>
+                <li className="m-0 ml-2">For legal reasons.</li>
               </div>
             </ul>
 

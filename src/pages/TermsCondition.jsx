@@ -43,21 +43,36 @@ const TermsCondition = () => {
             </p>
             <ul className="mt-4">
               <div className="d-flex align-items-start mb-2">
-                <img src="/images/icons/checked.png" alt="" className="mr-2" />
-                <li className="m-0">
+                <lord-icon
+                  src="https://cdn.lordicon.com/oqdmuxru.json"
+                  trigger="loop"
+                  colors="primary:#30c9e8"
+                  style={{ width: "25px", height: "25px" }}
+                ></lord-icon>
+                <li className="m-0 ml-2">
                   You must not republish material from this website.
                 </li>
               </div>
               <div className="d-flex align-items-start mb-2">
-                <img src="/images/icons/checked.png" alt="" className="mr-2" />
-                <li className="m-0">
+                <lord-icon
+                  src="https://cdn.lordicon.com/oqdmuxru.json"
+                  trigger="loop"
+                  colors="primary:#30c9e8"
+                  style={{ width: "25px", height: "25px" }}
+                ></lord-icon>
+                <li className="m-0 ml-2">
                   You must not sell, rent, or sub-license material from this
                   website.
                 </li>
               </div>
               <div className="d-flex align-items-start mb-2">
-                <img src="/images/icons/checked.png" alt="" className="mr-2" />
-                <li className="m-0">
+                <lord-icon
+                  src="https://cdn.lordicon.com/oqdmuxru.json"
+                  trigger="loop"
+                  colors="primary:#30c9e8"
+                  style={{ width: "25px", height: "25px" }}
+                ></lord-icon>
+                <li className="m-0 ml-2">
                   You must not reproduce, duplicate, copy, or otherwise exploit
                   material on this website for commercial purposes.
                 </li>
