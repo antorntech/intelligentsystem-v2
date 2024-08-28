@@ -448,7 +448,7 @@ select:-webkit-autofill:focus {
   position: relative;
   display: block;
   color: #fff;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 24px;
   text-transform: uppercase;
@@ -1141,7 +1141,7 @@ select:-webkit-autofill:focus {
 
 .nft-box .nft-box-title-wrap .nft-box-text {
   font-size: 14px;
-  color: #707070;
+  color: #303030;
 }
 
 .nft-box .nft-box-title-wrap .nft-box-title a {
@@ -1345,7 +1345,6 @@ select:-webkit-autofill:focus {
   color: #000000;
   font-size: 17px;
   font-weight: 400;
-  line-height: 1.8;
   margin-bottom: 30px;
 }
 
