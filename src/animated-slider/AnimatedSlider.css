@@ -65,7 +65,7 @@
 }
 
 .slide-description {
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: rgb(184, 184, 184);
   width: 50%;
   margin: 0 auto;
@@ -137,7 +137,7 @@
   }
 
   .slide-description {
-    font-size: 1rem;
+    font-size: 0.9rem;
     width: 100%;
   }
 }
