@@ -364,12 +364,14 @@ select:-webkit-autofill:focus {
 .header .header-inner .main-nav {
   position: absolute;
   top: 55%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  left: 31%;
-  padding-left: 5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  padding-left: 0;
+  margin: 0;
 }
 
 @media only screen and (max-width: 1199.99px) {
@@ -431,7 +433,6 @@ select:-webkit-autofill:focus {
 
 .header .header-inner .main-nav .menu li {
   position: relative;
-  margin-right: 23px;
   letter-spacing: 0.6px;
 }
 
@@ -452,9 +453,7 @@ select:-webkit-autofill:focus {
   font-weight: 700;
   line-height: 24px;
   text-transform: uppercase;
-  padding-right: 15px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 15px;
 }
 
 @media only screen and (max-width: 991.99px) {
