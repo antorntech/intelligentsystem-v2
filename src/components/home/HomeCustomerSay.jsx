@@ -124,7 +124,7 @@ const HomeCustomerSay = () => {
                     <div className="home-customer-say-review-content">
                       <p>{review.description}</p>
                       <h3>{review.name}</h3>
-                      <h4>{review.designation}</h4>
+                      <h6>{review.designation}</h6>
                     </div>
                   </div>
                 </div>

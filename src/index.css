@@ -256,7 +256,7 @@
   padding: 50px;
   transform: translate(-50%, -50%);
   text-align: center;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.521);
   box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -266,14 +266,14 @@
 
 .home-contact .sub-title {
   font-size: 1.5rem;
-  color: #050828;
+  color: #c9b245;
   margin-bottom: 5px;
 }
 
 .home-contact .contact-main-title {
   font-size: 2rem;
   font-weight: bold;
-  color: #050828;
+  color: #ffffff;
 }
 
 .home-contact .description {
@@ -482,7 +482,8 @@
 .home-customer-say-review-content p {
   color: #7e7e7e;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  padding-top: 10px;
 }
 
 @keyframes filling {
