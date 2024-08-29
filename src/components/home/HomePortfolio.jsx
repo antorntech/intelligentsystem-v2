@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const HomePortfolio = () => {
-  const portfolios = [
+  const softwares = [
     {
       id: 1,
       title: "University Project Management System",
@@ -54,14 +54,14 @@ const HomePortfolio = () => {
             </div>
           </div>
           <div className="row">
-            {portfolios.map((portfolio) => (
-              <div key={portfolio.id} className="col-lg-4 col-md-6 item">
+            {softwares.map((software) => (
+              <div key={software.id} className="col-lg-4 col-md-6 item">
                 <div className="nft-box">
                   <div className="nft-box-thumb">
-                    <img className="img-fluid" src={portfolio.banner} alt="" />
+                    <img className="img-fluid" src={software.banner} alt="" />
                     <div className="nft-box-btn-content">
                       <Link
-                        to={`/software/${portfolio.id}`}
+                        to={`/software/${software.id}`}
                         className="nft-box-btn"
                       >
                         Explore <i className="fa fa-arrow-right"></i>
@@ -72,10 +72,10 @@ const HomePortfolio = () => {
                     <div className="nft-box-title-wrap d-flex align-items-center justify-content-between">
                       <h3 className="nft-box-title">
                         <Link
-                          to={`/software/${portfolio.id}`}
+                          to={`/software/${software.id}`}
                           className="text-white"
                         >
-                          {portfolio.title}
+                          {software.title}
                         </Link>
                       </h3>
                       <div className="nft-box-trending-icon">
