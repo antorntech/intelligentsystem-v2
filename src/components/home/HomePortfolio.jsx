@@ -38,7 +38,7 @@ const HomePortfolio = () => {
           <div className="row">
             <div className="col-6">
               <h3 className="main-title text-white">
-                Portfolio{" "}
+                Software{" "}
                 <div className="underline-wrapper">
                   <div className="underline-circle bg-white"></div>
                   <div className="underline-line bg-white"></div>
