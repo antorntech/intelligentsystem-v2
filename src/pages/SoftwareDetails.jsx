@@ -8,6 +8,21 @@ const SoftwareDetails = () => {
     image: "/images/collections/13.jpg",
     author: "AM Antor",
     date: "September 17, 2022",
+    tools: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    features: [
+      "Centralized student records.",
+      "Easy course creation and updates.",
+      "Streamlined online admissions.",
+      "Handles payments and invoicing.",
+      "Digital attendance for students and staff.",
+    ],
+    benifits: [
+      "Automates tasks, saving time and reducing errors.",
+      "Easy access and management of all information.",
+      "Seamless interaction between students, faculty, and admin.",
+      "Anytime, anywhere access to up-to-date data.",
+      "Reduces paperwork and manual processes.",
+    ],
   };
 
   const allSoftwares = [
@@ -82,13 +97,55 @@ const SoftwareDetails = () => {
                     </div>
                     <div className="more-details">
                       <blockquote>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing
-                          elit, sed do eiusmod tempor incididunt labore et
-                          dolore magna aliqua. enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat.
-                        </p>
+                        <h4 style={{ fontSize: "18px", fontWeight: "600" }}>
+                          Development Tools
+                        </h4>
+                        <ul className="mt-2">
+                          {software.tools.map((tool) => (
+                            <li key={tool.id}>
+                              <i class="fa-solid fa-check"></i>
+                              <span
+                                className="ml-2"
+                                style={{ fontSize: "14px" }}
+                              >
+                                {tool}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </blockquote>
+                      <blockquote>
+                        <h4 style={{ fontSize: "18px", fontWeight: "600" }}>
+                          Key Features
+                        </h4>
+                        <ul className="mt-2">
+                          {software.features.map((feature) => (
+                            <li key={feature.id}>
+                              <i class="fa-solid fa-check"></i>
+                              <span
+                                className="ml-2"
+                                style={{ fontSize: "14px" }}
+                              >
+                                {feature}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </blockquote>
+                      <blockquote>
+                        <h4 style={{ fontSize: "18px", fontWeight: "600" }}>
+                          Benefits of University Management System
+                        </h4>
+                        <ul className="mt-2">
+                          {software.benifits.map((benifit) => (
+                            <li>
+                              <i class="fa-solid fa-check mr-2"></i>
+                              <span style={{ fontSize: "14px" }}>
+                                {benifit}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
                       </blockquote>
                     </div>
                     <div className="post-footer">
@@ -114,20 +171,22 @@ const SoftwareDetails = () => {
             <div className="col-lg-4">
               <div className="sidebar">
                 <div className="sidebar-widget sidebar-category">
-                  <h3 className="sidebar-widget-title">Category</h3>
+                  <h3 className="sidebar-widget-title">Categories</h3>
                   <div className="sidebar-widget-content">
                     <ul>
                       {categories.map((category) => (
                         <li key={category.id}>
-                          <Link to="/software">{category.name}</Link>
+                          <Link to={`/software/${category.id}`}>
+                            {category.name}
+                          </Link>
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
                 <div className="sidebar-widget sidebar-recent-posts">
-                  <h3 className="sidebar-widget-title">Recent Posts</h3>
-                  <div className="sidebar-widget-content">
+                  <h3 className="sidebar-widget-title">Popular Software</h3>
+                  <div className="sidebar-widget-content mt-2">
                     {allSoftwares.slice(0, 3).map((software) => (
                       <div key={software.id} className="sidebar-post">
                         <div className="post d-flex align-items-center">
