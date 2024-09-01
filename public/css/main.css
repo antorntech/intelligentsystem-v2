@@ -3124,6 +3124,10 @@ select:-webkit-autofill:focus {
   .blockQuote .key-features {
     width: 100%;
   }
+
+  .blog .blog-item .tags-list li {
+    margin-bottom: 12px;
+  }
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
