@@ -1878,7 +1878,7 @@ select:-webkit-autofill:focus {
 }
 
 .blog .blog-item .tags-list span {
-  background-image: linear-gradient(-124deg, #f9bf20, #0b7ed6, #074ba3);
+  background-image: linear-gradient(-124deg, #023852, #0b7ed6, #074ba3);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

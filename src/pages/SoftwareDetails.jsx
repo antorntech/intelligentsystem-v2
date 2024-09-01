@@ -152,8 +152,10 @@ const SoftwareDetails = () => {
                     </div>
                     <div className="post-footer">
                       <div className="post-tags">
-                        <h5>Tags</h5>
-                        <ul className="tags-list list-unstyled">
+                        <h4 style={{ fontSize: "18px", fontWeight: "600" }}>
+                          Tags
+                        </h4>
+                        <ul className="tags-list list-unstyled mt-2">
                           <li>
                             <span>web development</span>
                           </li>
