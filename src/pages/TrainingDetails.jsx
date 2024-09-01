@@ -247,8 +247,13 @@ const TrainingDetails = () => {
                                     {module.title}
                                   </span>
                                 </div>
-
-                                <i className="fa fa-angle-down"></i>
+                                <i
+                                  className={`fa-solid ${
+                                    activeIndex === index
+                                      ? "fa-minus"
+                                      : "fa-plus"
+                                  }`}
+                                ></i>
                               </button>
                               <div
                                 id={module.id}
