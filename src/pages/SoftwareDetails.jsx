@@ -96,42 +96,44 @@ const SoftwareDetails = () => {
                       </p>
                     </div>
                     <div className="more-details">
-                      <blockquote>
-                        <h4 style={{ fontSize: "18px", fontWeight: "600" }}>
-                          Development Tools
-                        </h4>
-                        <ul className="mt-2">
-                          {software.tools.map((tool) => (
-                            <li key={tool.id}>
-                              <i class="fa-solid fa-check"></i>
-                              <span
-                                className="ml-2"
-                                style={{ fontSize: "14px" }}
-                              >
-                                {tool}
-                              </span>
-                            </li>
-                          ))}
-                        </ul>
-                      </blockquote>
-                      <blockquote>
-                        <h4 style={{ fontSize: "18px", fontWeight: "600" }}>
-                          Key Features
-                        </h4>
-                        <ul className="mt-2">
-                          {software.features.map((feature) => (
-                            <li key={feature.id}>
-                              <i class="fa-solid fa-check"></i>
-                              <span
-                                className="ml-2"
-                                style={{ fontSize: "14px" }}
-                              >
-                                {feature}
-                              </span>
-                            </li>
-                          ))}
-                        </ul>
-                      </blockquote>
+                      <div className="blockQuote">
+                        <blockquote className="devlopment-tools">
+                          <h4 style={{ fontSize: "18px", fontWeight: "600" }}>
+                            Development Tools
+                          </h4>
+                          <ul className="mt-2">
+                            {software.tools.map((tool) => (
+                              <li key={tool.id}>
+                                <i class="fa-solid fa-check"></i>
+                                <span
+                                  className="ml-2"
+                                  style={{ fontSize: "14px" }}
+                                >
+                                  {tool}
+                                </span>
+                              </li>
+                            ))}
+                          </ul>
+                        </blockquote>
+                        <blockquote className="key-features">
+                          <h4 style={{ fontSize: "18px", fontWeight: "600" }}>
+                            Key Features
+                          </h4>
+                          <ul className="mt-2">
+                            {software.features.map((feature) => (
+                              <li key={feature.id}>
+                                <i class="fa-solid fa-check"></i>
+                                <span
+                                  className="ml-2"
+                                  style={{ fontSize: "14px" }}
+                                >
+                                  {feature}
+                                </span>
+                              </li>
+                            ))}
+                          </ul>
+                        </blockquote>
+                      </div>
                       <blockquote>
                         <h4 style={{ fontSize: "18px", fontWeight: "600" }}>
                           Benefits of University Management System
