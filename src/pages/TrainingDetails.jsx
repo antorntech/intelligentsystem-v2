@@ -1,14 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
 import PageHeader from "../shared/PageHeader";
 import { Link } from "react-router-dom";
 
 const TrainingDetails = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleCollapse = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
   const service = {
-    title: "Responsive Website Development",
-    image: "/images/trainings/training2.jpg",
+    title: "Skill Development Training",
+    image: "/images/collections/8.jpg",
     author: "AM Antor",
     date: "September 17, 2022",
     category: "Skill Development Training",
+    benifits: [
+      "Learn from experienced professionals with real-world expertise.",
+      "Gain practical experience with interactive sessions and projects.",
+      "Choose from various course timings to fit your schedule.",
+      "Receive a recognized certificate upon completion to boost your resume.",
+    ],
+    courseOffered: [
+      "Coding, data analysis, cybersecurity.",
+      "Team management, project leadership, communication.",
+      "Tailored programs for various industries.",
+    ],
+    workingProcess: [
+      "Select from a wide range of topics tailored to your goals.",
+      "Sign up through our easy-to-use online portal or contact our team.",
+      "Attend sessions, complete assignments, and engage with instructors.",
+      "Obtain your certificate upon successful completion of the course.",
+    ],
+    modules: [
+      {
+        id: 1,
+        heading: "headingOne",
+        title: "Introduction to Skill Development",
+        description:
+          "Learn the basics of React and start building modern web applications.",
+        list: [
+          "Introduction to React",
+          "Installing React",
+          "Creating a React App",
+        ],
+      },
+      {
+        id: 2,
+        heading: "headingTwo",
+        title: "Skill Development with JavaScript",
+        description:
+          "Dive deep into advanced JavaScript concepts and improve your coding skills.",
+        list: [
+          "Introduction to JavaScript",
+          "Variables and Data Types",
+          "Control Structures",
+        ],
+      },
+
+      {
+        id: 3,
+        heading: "headingThree",
+        title: "Advanced Concepts in Skill Development",
+        description:
+          "Understand the fundamentals of CSS and how to style web pages effectively.",
+        list: ["Introduction to CSS", "CSS Selectors", "CSS Properties"],
+      },
+    ],
   };
 
   const allServices = [
@@ -66,7 +124,7 @@ const TrainingDetails = () => {
   ];
   return (
     <>
-      <PageHeader title="Training Details" />
+      <PageHeader title="Service Details" />
       <section className="blog">
         <div className="container">
           <div className="row">
@@ -85,9 +143,6 @@ const TrainingDetails = () => {
                   {/* <!-- Post Content --> */}
                   <div className="blog-item-content">
                     <div className="post-content">
-                      <span className="cat">
-                        <div>{service.category}</div>
-                      </span>
                       <h3 className="post-title">
                         <div>{service.title}</div>
                       </h3>
@@ -102,26 +157,122 @@ const TrainingDetails = () => {
                     </div>
                     <div className="post-text">
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit, sed do eiusmod tempor incididunt labore et dolore
-                        magna aliqua. enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit
-                        anim.
+                        Our Skill Development Training offers targeted programs
+                        to help you enhance your skills and advance your career.
+                        Whether you're looking to improve your technical
+                        abilities, leadership skills, or industry-specific
+                        knowledge, our courses are designed to meet your needs.
                       </p>
                     </div>
                     <div className="more-details">
                       <blockquote>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing
-                          elit, sed do eiusmod tempor incididunt labore et
-                          dolore magna aliqua. enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat.
-                        </p>
+                        <h4 style={{ fontSize: "18px", fontWeight: "600" }}>
+                          Key Benefits
+                        </h4>
+                        <ul className="mt-2">
+                          {service.benifits.map((benifit) => (
+                            <li>
+                              <i class="fa-solid fa-check mr-2"></i>
+                              <span style={{ fontSize: "14px" }}>
+                                {benifit}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </blockquote>
+                      <blockquote>
+                        <h4 style={{ fontSize: "18px", fontWeight: "600" }}>
+                          Course Offered
+                        </h4>
+                        <ul className="mt-2">
+                          {service.courseOffered.map((offer) => (
+                            <li>
+                              <i class="fa-solid fa-check mr-2"></i>
+                              <span style={{ fontSize: "14px" }}>{offer}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </blockquote>
+                      <blockquote>
+                        <h4 style={{ fontSize: "18px", fontWeight: "600" }}>
+                          How It Works
+                        </h4>
+                        <ul className="mt-2">
+                          {service.workingProcess.map((work) => (
+                            <li>
+                              <i class="fa-solid fa-check mr-2"></i>
+                              <span style={{ fontSize: "14px" }}>{work}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </blockquote>
+                      <blockquote>
+                        <h4 style={{ fontSize: "18px", fontWeight: "600" }}>
+                          Modules
+                        </h4>
+                        <div id="accordion">
+                          {service?.modules.map((module, index) => (
+                            <div key={module.id} className="card active mt-3">
+                              <button
+                                style={{
+                                  color: "#000",
+                                  display: "flex",
+                                  alignItems: "center",
+                                  padding: "15px 10px",
+                                  justifyContent: "space-between",
+                                }}
+                                data-toggle="collapse"
+                                data-target={"#" + module.id}
+                                aria-expanded={activeIndex === index}
+                                aria-controls={module.id}
+                              >
+                                <div
+                                  style={{
+                                    color: "#000",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "space-between",
+                                  }}
+                                >
+                                  <span className="moduleNumber">
+                                    {module.id}
+                                  </span>
+                                  <span
+                                    className="ml-2"
+                                    style={{
+                                      fontSize: "18px",
+                                      fontWeight: "1000",
+                                    }}
+                                  >
+                                    {module.title}
+                                  </span>
+                                </div>
+
+                                <i className="fa fa-angle-down"></i>
+                              </button>
+                              <div
+                                id={module.id}
+                                className={`collapse ${
+                                  activeIndex === index ? "show" : ""
+                                }`}
+                                aria-labelledby={module.heading}
+                                data-parent="#accordion"
+                              >
+                                <div className="card-body">
+                                  <p>{module.description}</p>
+                                  <ul className="mt-1">
+                                    {module?.list?.map((subModule) => (
+                                      <li>
+                                        <i class="fa-solid fa-check mr-2"></i>
+                                        {subModule}
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
                       </blockquote>
                     </div>
                     <div className="post-footer">
@@ -182,6 +333,29 @@ const TrainingDetails = () => {
                         </div>
                       </div>
                     ))}
+                  </div>
+                </div>
+                <div className="sidebar-widget text-center">
+                  <div className="help-card-body">
+                    <lord-icon
+                      src="https://cdn.lordicon.com/rsvfayfn.json"
+                      trigger="loop"
+                      delay="2000"
+                      colors="primary:#fff"
+                      style={{ width: "50px", height: "50px" }}
+                    ></lord-icon>
+                    <h2
+                      style={{
+                        fontSize: "25px",
+                        fontWeight: "600",
+                        marginBottom: "20px",
+                      }}
+                    >
+                      For additional service information
+                    </h2>
+                    <Link to="tel:+1234567890" className="sidebar-help-button">
+                      Call Us
+                    </Link>
                   </div>
                 </div>
               </div>

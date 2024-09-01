@@ -32,41 +32,6 @@ const ServiceDetails = () => {
       "Attend sessions, complete assignments, and engage with instructors.",
       "Obtain your certificate upon successful completion of the course.",
     ],
-    modules: [
-      {
-        id: 1,
-        heading: "headingOne",
-        title: "Introduction to Skill Development",
-        description:
-          "Learn the basics of React and start building modern web applications.",
-        list: [
-          "Introduction to React",
-          "Installing React",
-          "Creating a React App",
-        ],
-      },
-      {
-        id: 2,
-        heading: "headingTwo",
-        title: "Skill Development with JavaScript",
-        description:
-          "Dive deep into advanced JavaScript concepts and improve your coding skills.",
-        list: [
-          "Introduction to JavaScript",
-          "Variables and Data Types",
-          "Control Structures",
-        ],
-      },
-
-      {
-        id: 3,
-        heading: "headingThree",
-        title: "Advanced Concepts in Skill Development",
-        description:
-          "Understand the fundamentals of CSS and how to style web pages effectively.",
-        list: ["Introduction to CSS", "CSS Selectors", "CSS Properties"],
-      },
-    ],
   };
 
   const allServices = [
@@ -205,74 +170,6 @@ const ServiceDetails = () => {
                             </li>
                           ))}
                         </ul>
-                      </blockquote>
-                      <blockquote>
-                        <h4 style={{ fontSize: "18px", fontWeight: "600" }}>
-                          Modules
-                        </h4>
-                        <div id="accordion">
-                          {service?.modules.map((module, index) => (
-                            <div key={module.id} className="card active mt-3">
-                              <button
-                                style={{
-                                  color: "#000",
-                                  display: "flex",
-                                  alignItems: "center",
-                                  padding: "15px 10px",
-                                  justifyContent: "space-between",
-                                }}
-                                data-toggle="collapse"
-                                data-target={"#" + module.id}
-                                aria-expanded={activeIndex === index}
-                                aria-controls={module.id}
-                              >
-                                <div
-                                  style={{
-                                    color: "#000",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "space-between",
-                                  }}
-                                >
-                                  <span className="moduleNumber">
-                                    {module.id}
-                                  </span>
-                                  <span
-                                    className="ml-2"
-                                    style={{
-                                      fontSize: "18px",
-                                      fontWeight: "1000",
-                                    }}
-                                  >
-                                    {module.title}
-                                  </span>
-                                </div>
-
-                                <i className="fa fa-angle-down"></i>
-                              </button>
-                              <div
-                                id={module.id}
-                                className={`collapse ${
-                                  activeIndex === index ? "show" : ""
-                                }`}
-                                aria-labelledby={module.heading}
-                                data-parent="#accordion"
-                              >
-                                <div className="card-body">
-                                  <p>{module.description}</p>
-                                  <ul className="mt-1">
-                                    {module?.list?.map((subModule) => (
-                                      <li>
-                                        <i class="fa-solid fa-check mr-2"></i>
-                                        {subModule}
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
                       </blockquote>
                     </div>
                     <div className="post-footer">
