@@ -1878,13 +1878,13 @@ select:-webkit-autofill:focus {
 }
 
 .blog .blog-item .tags-list span {
-  background-image: linear-gradient(-124deg, #023852, #0b7ed6, #074ba3);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-color: #050828;
+  color: #fff;
   font-size: 15px;
   font-weight: 600;
   margin-right: 15px;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 /* --------------------------------------
@@ -2433,6 +2433,24 @@ select:-webkit-autofill:focus {
 .pagination ul li a:hover,
 .pagination ul li span:hover {
   background: linear-gradient(124deg, #5a9ff9, #199bff, #f9bf20);
+}
+
+.moduleNumber {
+  background-color: #000000;
+  color: #fff;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.sidebar-help-button {
+  background: linear-gradient(124deg, #5a9ff9, #199bff, #2053f9);
+  color: #fff;
+  border-radius: 24px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 .blog .sidebar .sidebar-widget {

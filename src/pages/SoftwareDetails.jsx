@@ -155,7 +155,7 @@ const SoftwareDetails = () => {
                         <h4 style={{ fontSize: "18px", fontWeight: "600" }}>
                           Tags
                         </h4>
-                        <ul className="tags-list list-unstyled mt-2">
+                        <ul className="tags-list list-unstyled mt-3">
                           <li>
                             <span>web development</span>
                           </li>
@@ -212,6 +212,29 @@ const SoftwareDetails = () => {
                         </div>
                       </div>
                     ))}
+                  </div>
+                </div>
+                <div className="sidebar-widget text-center">
+                  <div className="help-card-body">
+                    <lord-icon
+                      src="https://cdn.lordicon.com/rsvfayfn.json"
+                      trigger="loop"
+                      delay="2000"
+                      colors="primary:#fff"
+                      style={{ width: "50px", height: "50px" }}
+                    ></lord-icon>
+                    <h2
+                      style={{
+                        fontSize: "25px",
+                        fontWeight: "600",
+                        marginBottom: "20px",
+                      }}
+                    >
+                      For additional service information
+                    </h2>
+                    <Link to="tel:+1234567890" className="sidebar-help-button">
+                      Call Us
+                    </Link>
                   </div>
                 </div>
               </div>
