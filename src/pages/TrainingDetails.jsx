@@ -256,7 +256,7 @@ const TrainingDetails = () => {
                               </button>
                               <div
                                 id={module.id}
-                                className={`collapse ${
+                                className={`collapse scale-up-ver-top ${
                                   activeIndex === index ? "show" : ""
                                 }`}
                                 aria-labelledby={module.heading}
