@@ -3199,7 +3199,7 @@ select:-webkit-autofill:focus {
 }
 
 .scale-up-ver-top {
-  animation: scale-up-ver-top 1s ease-in-out alternate both;
+  animation: scale-up-ver-top 0.5s ease-in-out alternate both;
 }
 
 @keyframes scale-up-ver-top {
