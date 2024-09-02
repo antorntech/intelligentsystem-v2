@@ -6,7 +6,7 @@ const TrainingDetails = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleCollapse = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
+    setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
   const service = {
@@ -36,7 +36,7 @@ const TrainingDetails = () => {
       {
         id: 1,
         heading: "headingOne",
-        title: "Introduction to Skill Development",
+        title: "Module One",
         description:
           "Learn the basics of React and start building modern web applications.",
         list: [
@@ -48,7 +48,7 @@ const TrainingDetails = () => {
       {
         id: 2,
         heading: "headingTwo",
-        title: "Skill Development with JavaScript",
+        title: "Module Two",
         description:
           "Dive deep into advanced JavaScript concepts and improve your coding skills.",
         list: [
@@ -61,7 +61,7 @@ const TrainingDetails = () => {
       {
         id: 3,
         heading: "headingThree",
-        title: "Advanced Concepts in Skill Development",
+        title: "Module Three",
         description:
           "Understand the fundamentals of CSS and how to style web pages effectively.",
         list: ["Introduction to CSS", "CSS Selectors", "CSS Properties"],
@@ -221,8 +221,7 @@ const TrainingDetails = () => {
                                   padding: "15px 10px",
                                   justifyContent: "space-between",
                                 }}
-                                data-toggle="collapse"
-                                data-target={"#" + module.id}
+                                onClick={() => toggleCollapse(index)} // Attach the toggle function here
                                 aria-expanded={activeIndex === index}
                                 aria-controls={module.id}
                               >
@@ -267,8 +266,8 @@ const TrainingDetails = () => {
                                   <p>{module.description}</p>
                                   <ul className="mt-1">
                                     {module?.list?.map((subModule) => (
-                                      <li>
-                                        <i class="fa-solid fa-check mr-2"></i>
+                                      <li key={subModule}>
+                                        <i className="fa-solid fa-check mr-2"></i>
                                         {subModule}
                                       </li>
                                     ))}
