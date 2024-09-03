@@ -57,10 +57,13 @@ const TrainingModules = () => {
               activeModuleId === module.id ? "open" : ""
             }`}
           >
-            <p>{module.description}</p>
+            <p className="description">{module.description}</p>
             <ul>
               {module.list.map((item, index) => (
-                <li key={index}>{item}</li>
+                <li className="list-item" key={index}>
+                  <i class="fa-regular fa-square-check mr-2"></i>
+                  {item}
+                </li>
               ))}
             </ul>
           </div>

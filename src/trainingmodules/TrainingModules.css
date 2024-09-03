@@ -91,3 +91,8 @@
 .accordion-label.open::after {
   transform: rotate(90deg);
 }
+
+.list-item {
+  font-size: 18px;
+  font-weight: bold;
+}
