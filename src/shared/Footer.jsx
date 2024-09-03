@@ -1,8 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Footer = () => {
   const year = new Date().getFullYear();
+  const [email, setEmail] = useState("");
+  const handleSubscribe = () => {
+    if (!email) {
+      toast.error("Please enter your email", {
+        position: "bottom-right",
+        autoClose: 2000,
+      });
+      return;
+    }
+    toast.success("Thank you for subscribing", {
+      position: "bottom-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+    setEmail("");
+  };
   return (
     <>
       <footer className="footer">
@@ -61,11 +83,17 @@ const Footer = () => {
                       type="text"
                       name="text"
                       placeholder="Email address"
-                      required=""
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
-                    <a className="submit" href="#0">
+                    <button
+                      className="submit"
+                      type="submit"
+                      style={{ cursor: "pointer" }}
+                      onClick={handleSubscribe}
+                    >
                       <i className="fa fa-send"></i>
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
