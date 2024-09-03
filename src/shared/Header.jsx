@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const [isNavActive, setIsNavActive] = useState(false);
@@ -75,9 +75,18 @@ const Header = () => {
                   }`}
                   key={menu.id}
                 >
-                  <Link to={menu.link} onClick={() => toggleSubMenu(menu.id)}>
+                  <NavLink
+                    to={menu.link}
+                    onClick={() => toggleSubMenu(menu.id)}
+                    style={({ isActive, isPending, isTransitioning }) => {
+                      return {
+                        fontWeight: isActive ? "bold" : "",
+                        color: isActive ? "#074ba3" : "",
+                      };
+                    }}
+                  >
                     {menu.title}
-                  </Link>
+                  </NavLink>
                   {/* Example of a sub-menu (if needed) */}
                   {/* <ul
                     className="sub-menu"
