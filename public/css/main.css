@@ -465,7 +465,7 @@ select:-webkit-autofill:focus {
 }
 
 .header .header-inner .main-nav .menu li a:hover {
-  background-image: linear-gradient(-124deg, #f9bf20, #0b7ed6, #074ba3);
+  background-image: linear-gradient(-124deg, #2f9edf, #0b7ed6, #074ba3);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -596,21 +596,21 @@ select:-webkit-autofill:focus {
   li.menu-item-has-children
   > a:hover::after,
 .header .header-inner .main-nav .menu li.menu-item-has-children > a:hover {
-  background-image: linear-gradient(-124deg, #f9bf20, #0b7ed6, #074ba3);
+  background-image: linear-gradient(-124deg, #2f9edf, #0b7ed6, #074ba3);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .header .header-inner .main-nav .menu li.menu-item.current > a {
-  background-image: linear-gradient(-124deg, #f9bf20, #0b7ed6, #074ba3);
+  background-image: linear-gradient(-124deg, #2f9edf, #0b7ed6, #074ba3);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .header .header-inner .main-nav .menu li.menu-item.current > a::after {
-  background-image: linear-gradient(-124deg, #f9bf20, #0b7ed6, #074ba3);
+  background-image: linear-gradient(-124deg, #2f9edf, #0b7ed6, #074ba3);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -813,7 +813,7 @@ select:-webkit-autofill:focus {
 }
 
 .home .home-content h1 span {
-  background-image: linear-gradient(-124deg, #f9bf20, #0b7ed6, #074ba3);
+  background-image: linear-gradient(-124deg, #2f9edf, #0b7ed6, #074ba3);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -874,7 +874,7 @@ select:-webkit-autofill:focus {
 }
 
 .home .home-facts .facts-list li span.number {
-  background-image: linear-gradient(-124deg, #f9bf20, #0b7ed6, #074ba3);
+  background-image: linear-gradient(-124deg, #2f9edf, #0b7ed6, #074ba3);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1115,7 +1115,7 @@ select:-webkit-autofill:focus {
 
 .nft-box .nft-box-btn-content .nft-box-btn i {
   margin-left: 8px;
-  background-image: linear-gradient(-124deg, #f9bf20, #0b7ed6, #074ba3);
+  background-image: linear-gradient(-124deg, #2f9edf, #0b7ed6, #074ba3);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1330,7 +1330,7 @@ select:-webkit-autofill:focus {
 }
 
 .about .sub-title {
-  background-image: linear-gradient(-124deg, #f9bf20, #0b7ed6, #074ba3);
+  background-image: linear-gradient(-124deg, #2f9edf, #0b7ed6, #074ba3);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1791,7 +1791,7 @@ select:-webkit-autofill:focus {
 }
 
 .blog .blog-item .blog-item-content .post-content .cat {
-  background-image: linear-gradient(-124deg, #f9bf20, #0b7ed6, #074ba3);
+  background-image: linear-gradient(-124deg, #2f9edf, #0b7ed6, #074ba3);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1871,7 +1871,7 @@ select:-webkit-autofill:focus {
 }
 
 .blog .blog-item .post-content h3:hover {
-  background-image: linear-gradient(-124deg, #f9bf20, #0b7ed6, #074ba3);
+  background-image: linear-gradient(-124deg, #2f9edf, #0b7ed6, #074ba3);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1934,7 +1934,7 @@ select:-webkit-autofill:focus {
 }
 
 .service .service-item .service-item-content .post-content .cat {
-  background-image: linear-gradient(-124deg, #f9bf20, #0b7ed6, #074ba3);
+  background-image: linear-gradient(-124deg, #2f9edf, #0b7ed6, #074ba3);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2014,7 +2014,7 @@ select:-webkit-autofill:focus {
 }
 
 .service .service-item .post-content h3:hover {
-  background-image: linear-gradient(-124deg, #f9bf20, #0b7ed6, #074ba3);
+  background-image: linear-gradient(-124deg, #2f9edf, #0b7ed6, #074ba3);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2264,7 +2264,7 @@ select:-webkit-autofill:focus {
 
 .footer .footer-bottom .copyright p span {
   font-family: "Poppins", sans-serif;
-  background-image: linear-gradient(-124deg, #f9bf20, #0b7ed6, #074ba3);
+  background-image: linear-gradient(-124deg, #2f9edf, #0b7ed6, #074ba3);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2540,7 +2540,7 @@ select:-webkit-autofill:focus {
 }
 
 .blog .sidebar .sidebar-category ul li a:hover {
-  background-image: linear-gradient(-124deg, #f9bf20, #0b7ed6, #074ba3);
+  background-image: linear-gradient(-124deg, #2f9edf, #0b7ed6, #074ba3);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2577,7 +2577,7 @@ select:-webkit-autofill:focus {
 }
 
 .blog .sidebar .sidebar-recent-posts .post .post-title:hover {
-  background-image: linear-gradient(-124deg, #f9bf20, #0b7ed6, #074ba3);
+  background-image: linear-gradient(-124deg, #2f9edf, #0b7ed6, #074ba3);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2723,7 +2723,7 @@ select:-webkit-autofill:focus {
 }
 
 .blog .blog-item .blog-item-content .post-footer .post-tags ul li a:hover {
-  background-image: linear-gradient(-124deg, #f9bf20, #0b7ed6, #074ba3);
+  background-image: linear-gradient(-124deg, #2f9edf, #0b7ed6, #074ba3);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2779,7 +2779,7 @@ select:-webkit-autofill:focus {
   right: 0;
   font-size: 16px;
   font-weight: 500;
-  background-image: linear-gradient(-124deg, #f9bf20, #0b7ed6, #074ba3);
+  background-image: linear-gradient(-124deg, #2f9edf, #0b7ed6, #074ba3);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
