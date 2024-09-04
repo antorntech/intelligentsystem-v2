@@ -50,6 +50,24 @@ const Contact = () => {
       */
 
       console.log("Form submitted:", formData); // Just for testing, remove this in production
+
+      const existingData =
+        JSON.parse(localStorage.getItem("notificationsData")) || [];
+
+      const newEntry = {
+        id: Date.now(),
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      };
+
+      // Add the new entry to the existing data
+      const updatedData = [...existingData, newEntry];
+
+      // Save the updated data back to local storage
+      localStorage.setItem("notificationsData", JSON.stringify(updatedData));
+
       toast.success("Message sent successfully", {
         position: "bottom-right",
         autoClose: 1000,
@@ -108,7 +126,7 @@ const Contact = () => {
                       </div>
                       <div className="content-box">
                         <h5>Support</h5>
-                        <p>+88016 0808 1907</p>
+                        <p>+88015 3485 5125</p>
                       </div>
                     </div>
                   </div>
