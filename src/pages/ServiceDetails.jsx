@@ -147,7 +147,7 @@ const ServiceDetails = () => {
                       </blockquote>
                       <blockquote>
                         <h4 style={{ fontSize: "18px", fontWeight: "600" }}>
-                          Course Offered
+                          Service Offered
                         </h4>
                         <ul className="mt-2">
                           {service.courseOffered.map((offer) => (
