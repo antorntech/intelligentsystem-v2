@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const SoftwareDetails = () => {
   const software = {
-    title: "It’s the Great Chance to Invest in NFTs",
+    title: "University Project Management System",
     image: "/images/collections/13.jpg",
     author: "AM Antor",
     date: "September 17, 2022",
