@@ -24,7 +24,7 @@ const HomeNewAbout = () => {
       <div
         className="home-new-about-bottom"
         data-aos="fade-up"
-        data-aos-duration="1000"
+        data-aos-duration="1500"
       >
         <div className="container">
           <div className="content-wrapper">
