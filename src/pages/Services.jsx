@@ -54,7 +54,7 @@ const Services = () => {
         <div className="container">
           <div className="row">
             {services.map((service) => (
-              <div className="col-lg-4 col-md-6 item mb-0 mb-lg-4">
+              <div className="col-lg-4 col-md-6 item">
                 <div className="nft-box">
                   <div className="nft-box-thumb">
                     <img className="img-fluid" src={service.banner} alt="" />
