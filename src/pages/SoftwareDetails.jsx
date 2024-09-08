@@ -16,7 +16,7 @@ const SoftwareDetails = () => {
       "Handles payments and invoicing.",
       "Digital attendance for students and staff.",
     ],
-    benifits: [
+    benefits: [
       "Automates tasks, saving time and reducing errors.",
       "Easy access and management of all information.",
       "Seamless interaction between students, faculty, and admin.",
@@ -95,60 +95,31 @@ const SoftwareDetails = () => {
                         anim.
                       </p>
                     </div>
-                    <div className="more-details">
-                      <div className="blockQuote">
-                        <blockquote className="devlopment-tools">
-                          <h4 style={{ fontSize: "18px", fontWeight: "600" }}>
-                            Development Tools
-                          </h4>
-                          <ul className="mt-2">
-                            {software.tools.map((tool) => (
-                              <li key={tool.id}>
-                                <i class="fa-solid fa-check"></i>
-                                <span
-                                  className="ml-2"
-                                  style={{ fontSize: "14px" }}
-                                >
-                                  {tool}
-                                </span>
-                              </li>
-                            ))}
-                          </ul>
-                        </blockquote>
-                        <blockquote className="key-features">
-                          <h4 style={{ fontSize: "18px", fontWeight: "600" }}>
-                            Key Features
-                          </h4>
-                          <ul className="mt-2">
-                            {software.features.map((feature) => (
-                              <li key={feature.id}>
-                                <i class="fa-solid fa-check"></i>
-                                <span
-                                  className="ml-2"
-                                  style={{ fontSize: "14px" }}
-                                >
-                                  {feature}
-                                </span>
-                              </li>
-                            ))}
-                          </ul>
-                        </blockquote>
-                      </div>
-                      <blockquote>
-                        <h4 style={{ fontSize: "18px", fontWeight: "600" }}>
-                          Benefits of University Management System
-                        </h4>
-                        <ul className="mt-2">
-                          {software.benifits.map((benifit) => (
-                            <li>
-                              <i class="fa-solid fa-check mr-2"></i>
-                              <span style={{ fontSize: "14px" }}>
-                                {benifit}
-                              </span>
-                            </li>
-                          ))}
-                        </ul>
-                      </blockquote>
+                    <div className="post-text">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit, sed do eiusmod tempor incididunt labore et dolore
+                        magna aliqua. enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit
+                        anim.
+                      </p>
+                    </div>
+                    <div className="post-text">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit, sed do eiusmod tempor incididunt labore et dolore
+                        magna aliqua. enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit
+                        anim.
+                      </p>
                     </div>
                     <div className="post-footer">
                       <div className="post-tags">
@@ -175,45 +146,91 @@ const SoftwareDetails = () => {
             <div className="col-lg-4">
               <div className="sidebar">
                 <div className="sidebar-widget sidebar-category">
-                  <h3 className="sidebar-widget-title">Categories</h3>
+                  <h3 className="sidebar-widget-title">Development Tools</h3>
                   <div className="sidebar-widget-content">
                     <ul>
-                      {categories.map((category) => (
-                        <li key={category.id}>
-                          <Link to={`/software/${category.id}`}>
-                            {category.name}
-                          </Link>
+                      {software.tools.map((tool, index) => (
+                        <li key={index}>
+                          <div>
+                            <lord-icon
+                              src="https://cdn.lordicon.com/oqdmuxru.json"
+                              trigger="loop"
+                              colors="primary:#f2b021"
+                              style={{ width: "25px", height: "25px" }}
+                            ></lord-icon>
+                          </div>
+                          <span>{tool}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
-                <div className="sidebar-widget sidebar-recent-posts">
-                  <h3 className="sidebar-widget-title">Popular Software</h3>
-                  <div className="sidebar-widget-content mt-2">
-                    {allSoftwares.slice(0, 3).map((software) => (
-                      <div key={software.id} className="sidebar-post">
+                <div className="sidebar-widget sidebar-category">
+                  <h3 className="sidebar-widget-title">Key Features</h3>
+                  <div className="sidebar-widget-content">
+                    <ul>
+                      {software.features.map((feature, index) => (
+                        <li key={index}>
+                          <div>
+                            <lord-icon
+                              src="https://cdn.lordicon.com/oqdmuxru.json"
+                              trigger="loop"
+                              colors="primary:#f2b021"
+                              style={{ width: "25px", height: "25px" }}
+                            ></lord-icon>
+                          </div>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                <div className="sidebar-widget sidebar-category">
+                  <h3 className="sidebar-widget-title">Software Benefits</h3>
+                  <div className="sidebar-widget-content">
+                    <ul>
+                      {software.benefits.map((benefit, index) => (
+                        <li key={index}>
+                          <div>
+                            <lord-icon
+                              src="https://cdn.lordicon.com/oqdmuxru.json"
+                              trigger="loop"
+                              colors="primary:#f2b021"
+                              style={{ width: "25px", height: "25px" }}
+                            ></lord-icon>
+                          </div>
+                          <span>{benefit}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                {/* <div className="sidebar-widget sidebar-recent-posts">
+                  <h3 className="sidebar-widget-title">Recent Posts</h3>
+                  <div className="sidebar-widget-content">
+                    {allServices.slice(0, 3).map((service) => (
+                      <div key={service.id} className="sidebar-post">
                         <div className="post d-flex align-items-center">
                           <div className="post-thumb">
-                            <Link to={`/software/${software.id}`}>
-                              <img src={software.image} alt="" />
+                            <Link to={`/services/${service.id}`}>
+                              <img src={service.banner} alt="" />
                             </Link>
                           </div>
                           <div className="post-content">
                             <h3 className="post-title">
-                              <Link to={`/software/${software.id}`}>
-                                {software.title}
+                              <Link to={`/services/${service.id}`}>
+                                {service.title}
                               </Link>
                             </h3>
                             <div className="post-meta">
-                              <span>{software.date}</span>
+                              <span>{service.date}</span>
                             </div>
                           </div>
                         </div>
                       </div>
                     ))}
                   </div>
-                </div>
+                </div> */}
                 <div className="sidebar-widget text-center">
                   <div className="help-card-body">
                     <lord-icon
