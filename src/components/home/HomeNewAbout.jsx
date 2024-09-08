@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const HomeNewAbout = () => {
   return (
     <section className="home-new-about">
-      <div className="container">
+      <div className="container" data-aos="fade-up" data-aos-duration="1000">
         <div className="home-new-about-top">
           <div className="top-content-left">
             <p>Our company</p>
@@ -21,7 +21,11 @@ const HomeNewAbout = () => {
           </div>
         </div>
       </div>
-      <div className="home-new-about-bottom">
+      <div
+        className="home-new-about-bottom"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <div className="container">
           <div className="content-wrapper">
             <div className="content-item">
