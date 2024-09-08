@@ -26,38 +26,113 @@ const HomeNewAbout = () => {
           <div className="content-wrapper">
             <div className="content-item">
               <div className="banner">
-                <img
-                  src="https://live.21lab.co/nanosoft/wp-content/uploads/2018/05/working-day-in-office-PQPMBS4-800x450.jpg"
-                  alt=""
-                />
+                <img src="/images/help.jpg" alt="" />
               </div>
               <div className="content-text">
                 <h3>How We Can Help ?</h3>
-                <Link to="/">Read More</Link>
+                <Link to="/help-support">
+                  <button className="readmore-btn">
+                    <div class="text">
+                      <span>Read</span>
+                      <span></span>
+                      <span>more</span>
+                    </div>
+                    <div class="clone">
+                      <span>Read</span>
+                      <span></span>
+                      <span>more</span>
+                    </div>
+                    <svg
+                      stroke-width="2"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      class="h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20px"
+                    >
+                      <path
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        stroke-linejoin="round"
+                        stroke-linecap="round"
+                      ></path>
+                    </svg>
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="content-item">
               <div className="banner">
-                <img
-                  src="https://live.21lab.co/nanosoft/wp-content/uploads/2018/05/285-jir-60871-nam-eye-id-392451-jpeg1-800x450.jpg"
-                  alt=""
-                />
+                <img src="/images/aboutus.jpg" alt="" />
               </div>
               <div className="content-text">
-                <h3>How We Can Help ?</h3>
-                <Link to="/">Read More</Link>
+                <h3>Who We Are ?</h3>
+                <Link to="/about">
+                  <button className="readmore-btn">
+                    <div class="text">
+                      <span>Read</span>
+                      <span></span>
+                      <span>more</span>
+                    </div>
+                    <div class="clone">
+                      <span>Read</span>
+                      <span></span>
+                      <span>more</span>
+                    </div>
+                    <svg
+                      stroke-width="2"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      class="h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20px"
+                    >
+                      <path
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        stroke-linejoin="round"
+                        stroke-linecap="round"
+                      ></path>
+                    </svg>
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="content-item">
               <div className="banner">
-                <img
-                  src="https://live.21lab.co/nanosoft/wp-content/uploads/2018/05/working-day-in-office-PQPMBS4-800x450.jpg"
-                  alt=""
-                />
+                <img src="/images/terms-condition.jpg" alt="" />
               </div>
               <div className="content-text">
-                <h3>How We Can Help ?</h3>
-                <Link to="/">Read More</Link>
+                <h3>What Is Our Term ?</h3>
+                <Link to="/terms-and-conditions">
+                  <button className="readmore-btn">
+                    <div class="text">
+                      <span>Read</span>
+                      <span></span>
+                      <span>more</span>
+                    </div>
+                    <div class="clone">
+                      <span>Read</span>
+                      <span></span>
+                      <span>more</span>
+                    </div>
+                    <svg
+                      stroke-width="2"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      class="h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20px"
+                    >
+                      <path
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        stroke-linejoin="round"
+                        stroke-linecap="round"
+                      ></path>
+                    </svg>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
