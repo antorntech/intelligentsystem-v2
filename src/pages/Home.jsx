@@ -10,12 +10,13 @@ import AnimatedSlider from "../animated-slider/AnimatedSlider";
 import HomeContact from "../components/home/HomeContact";
 import HomeVideo from "../components/home/HomeVideo";
 import HomeCustomerSay from "../components/home/HomeCustomerSay";
+import HomeNewAbout from "../components/home/HomeNewAbout";
 
 const Home = () => {
   return (
     <>
       <AnimatedSlider />
-      <HomeAbout />
+      <HomeNewAbout />
       <HomeService />
       <HomePortfolio />
       <HomeExplore />

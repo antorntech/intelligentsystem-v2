@@ -1,6 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@font-face {
+  font-family: Sailec Thin;
+  src: url("/fonts/Sailec\ Thin.ttf");
+}
+
+@font-face {
+  font-family: Sailec Light;
+  src: url("/fonts/Sailec\ Light.ttf");
+}
+
+@font-face {
+  font-family: Sailec Medium;
+  src: url("/fonts/Sailec\ Medium.ttf");
+}
+
+@font-face {
+  font-family: Sailec Bold;
+  src: url("/fonts/Sailec\ Bold.ttf");
+}
+
+@font-face {
+  font-family: Sailec Italic;
+  src: url("/fonts/Sailec\ Regular\ Italic.ttf");
+}
+
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: Sailec Medium;
   background-color: #ffffff;
   overflow-x: hidden;
 }
@@ -11,7 +35,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -464,11 +487,12 @@ select:-webkit-autofill:focus {
   }
 }
 
+.header .header-inner .main-nav .menu li a {
+  transition: all 0.5s ease-in-out;
+}
+
 .header .header-inner .main-nav .menu li a:hover {
-  background-image: linear-gradient(-124deg, #2f9edf, #0b7ed6, #074ba3);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ecad20;
 }
 
 .header .header-inner .main-nav .sub-menu {
@@ -989,19 +1013,99 @@ select:-webkit-autofill:focus {
   color: #199bff;
 }
 
+.home-new-about-top {
+  gap: 50px;
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.home-new-about-top .top-content-left,
+.top-content-right {
+  width: 50%;
+}
+
+.home-new-about-top .top-content-left h2 {
+  font-family: Sailec Bold;
+  font-weight: 1000;
+}
+
+.home-new-about-top .top-content-left p {
+  font-weight: bold;
+  color: #ecad20;
+  margin: 0;
+}
+
+.home-new-about-top .top-content-right p {
+  font-weight: bold;
+  margin-top: 70px;
+}
+
+.home-new-about-bottom {
+  position: relative;
+  background-color: #050828;
+  min-height: 350px;
+}
+
+.home-new-about-bottom .content-wrapper {
+  display: flex;
+  gap: 30px;
+  position: absolute;
+  top: -15%;
+  left: 0;
+  justify-content: center;
+}
+
+.home-new-about-bottom .content-wrapper .content-item {
+  width: 30%;
+  position: relative;
+}
+
+.home-new-about-bottom .content-wrapper .content-item .banner {
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+  border-radius: 25px 0 25px 0;
+  box-shadow: rgba(31, 31, 31, 0.726) 0px 4px 16px,
+    rgba(7, 7, 73, 0.767) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.home-new-about-bottom .content-wrapper .content-item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px 0 25px 0;
+  object-fit: cover;
+}
+
+.home-new-about-bottom .content-wrapper .content-item .content-text {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translate(-50%, 15%);
+  background-color: white;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  border-radius: 25px 0 25px 0;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
 /* --------------------------------------
    5. Trending Auctions
 -----------------------------------------*/
 .portfolio {
   background-color: #050828;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   position: relative;
 }
 
 .services {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .nft-box {
@@ -1212,7 +1316,7 @@ select:-webkit-autofill:focus {
 -----------------------------------------*/
 
 .collections {
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 .collections .item:nth-of-type(n + 4) .collection-item {
@@ -1295,8 +1399,8 @@ select:-webkit-autofill:focus {
 
 .home-about {
   background-color: #050828;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   position: relative;
 }
 
@@ -1320,7 +1424,7 @@ select:-webkit-autofill:focus {
 }
 
 .about {
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 .about .main-title {
@@ -1366,7 +1470,7 @@ select:-webkit-autofill:focus {
 -----------------------------------------*/
 
 .roadmap {
-  padding-top: 120px;
+  padding-top: 100px;
   padding-bottom: 180px;
 }
 
@@ -1488,7 +1592,7 @@ select:-webkit-autofill:focus {
 -----------------------------------------*/
 
 .discover-nfts {
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 .discover-nfts .item:nth-of-type(n + 4) .nft-box {
@@ -1524,8 +1628,8 @@ select:-webkit-autofill:focus {
 -----------------------------------------*/
 
 .teams {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .teams .team-item {
@@ -1655,8 +1759,8 @@ select:-webkit-autofill:focus {
 -----------------------------------------*/
 
 .faq {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   background-color: #050828;
   position: relative;
 }
@@ -1731,8 +1835,8 @@ select:-webkit-autofill:focus {
 -----------------------------------------*/
 
 .sponsors {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 /* --------------------------------------
@@ -1740,8 +1844,8 @@ select:-webkit-autofill:focus {
 -----------------------------------------*/
 
 .blog {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .blog .blog-items .blog-item {
@@ -1892,7 +1996,7 @@ select:-webkit-autofill:focus {
 -----------------------------------------*/
 
 .service {
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 .service .service-items .service-item {
@@ -2026,7 +2130,7 @@ select:-webkit-autofill:focus {
 
 .contact {
   position: relative;
-  padding: 120px 0;
+  padding: 100px 0;
 }
 
 .contact .contact-boxes {
@@ -2875,7 +2979,7 @@ select:-webkit-autofill:focus {
 
   /*----- Trending Auctions ----*/
   .main-home .services {
-    padding-top: 120px;
+    padding-top: 100px;
   }
 
   .services .nft-box {
@@ -3152,8 +3256,8 @@ select:-webkit-autofill:focus {
 
 /* terms and conditions */
 .terms-condition {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .terms-condition p {
@@ -3176,8 +3280,8 @@ select:-webkit-autofill:focus {
 
 /* privacy-policy */
 .privacy-policy {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .privacy-policy p {

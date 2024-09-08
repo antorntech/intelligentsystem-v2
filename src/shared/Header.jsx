@@ -81,7 +81,7 @@ const Header = () => {
                     style={({ isActive, isPending, isTransitioning }) => {
                       return {
                         fontWeight: isActive ? "bold" : "",
-                        color: isActive ? "#074ba3" : "",
+                        color: isActive ? "#ECAD20" : "",
                       };
                     }}
                   >

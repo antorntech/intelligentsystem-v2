@@ -161,8 +161,8 @@
 
 /* help & support page style */
 .help-support {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .section-subtitle {
@@ -245,7 +245,7 @@
 
 /* home contact section */
 .home-contact {
-  padding-top: 120px;
+  padding-top: 100px;
   position: relative;
 }
 
@@ -414,7 +414,7 @@
 
 /* home-review */
 .customer-say {
-  padding-top: 120px;
+  padding-top: 100px;
   position: relative;
 }
 
