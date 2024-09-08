@@ -15,18 +15,18 @@ const ServiceDetails = () => {
     author: "AM Antor",
     date: "September 17, 2022",
     category: "Skill Development Training",
-    benifits: [
+    benefits: [
       "Learn from experienced professionals with real-world expertise.",
       "Gain practical experience with interactive sessions and projects.",
       "Choose from various course timings to fit your schedule.",
       "Receive a recognized certificate upon completion to boost your resume.",
     ],
-    courseOffered: [
+    offers: [
       "Coding, data analysis, cybersecurity.",
       "Team management, project leadership, communication.",
       "Tailored programs for various industries.",
     ],
-    workingProcess: [
+    works: [
       "Select from a wide range of topics tailored to your goals.",
       "Sign up through our easy-to-use online portal or contact our team.",
       "Attend sessions, complete assignments, and engage with instructors.",
@@ -129,48 +129,23 @@ const ServiceDetails = () => {
                         knowledge, our courses are designed to meet your needs.
                       </p>
                     </div>
-                    <div className="more-details">
-                      <blockquote>
-                        <h4 style={{ fontSize: "18px", fontWeight: "600" }}>
-                          Key Benefits
-                        </h4>
-                        <ul className="mt-2">
-                          {service.benifits.map((benifit) => (
-                            <li>
-                              <i class="fa-solid fa-check mr-2"></i>
-                              <span style={{ fontSize: "14px" }}>
-                                {benifit}
-                              </span>
-                            </li>
-                          ))}
-                        </ul>
-                      </blockquote>
-                      <blockquote>
-                        <h4 style={{ fontSize: "18px", fontWeight: "600" }}>
-                          Service Offered
-                        </h4>
-                        <ul className="mt-2">
-                          {service.courseOffered.map((offer) => (
-                            <li>
-                              <i class="fa-solid fa-check mr-2"></i>
-                              <span style={{ fontSize: "14px" }}>{offer}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </blockquote>
-                      <blockquote>
-                        <h4 style={{ fontSize: "18px", fontWeight: "600" }}>
-                          How It Works
-                        </h4>
-                        <ul className="mt-2">
-                          {service.workingProcess.map((work) => (
-                            <li>
-                              <i class="fa-solid fa-check mr-2"></i>
-                              <span style={{ fontSize: "14px" }}>{work}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </blockquote>
+                    <div className="post-text">
+                      <p>
+                        Our Skill Development Training offers targeted programs
+                        to help you enhance your skills and advance your career.
+                        Whether you're looking to improve your technical
+                        abilities, leadership skills, or industry-specific
+                        knowledge, our courses are designed to meet your needs.
+                      </p>
+                    </div>
+                    <div className="post-text">
+                      <p>
+                        Our Skill Development Training offers targeted programs
+                        to help you enhance your skills and advance your career.
+                        Whether you're looking to improve your technical
+                        abilities, leadership skills, or industry-specific
+                        knowledge, our courses are designed to meet your needs.
+                      </p>
                     </div>
                     <div className="post-footer">
                       <div className="post-tags">
@@ -195,18 +170,66 @@ const ServiceDetails = () => {
             <div className="col-lg-4">
               <div className="sidebar">
                 <div className="sidebar-widget sidebar-category">
-                  <h3 className="sidebar-widget-title">Category</h3>
+                  <h3 className="sidebar-widget-title">Key Benefits</h3>
                   <div className="sidebar-widget-content">
                     <ul>
-                      {categories.map((category) => (
-                        <li key={category.id}>
-                          <Link to="/services">{category.name}</Link>
+                      {service.benefits.map((benefit, index) => (
+                        <li key={index}>
+                          <div>
+                            <lord-icon
+                              src="https://cdn.lordicon.com/oqdmuxru.json"
+                              trigger="loop"
+                              colors="primary:#f2b021"
+                              style={{ width: "25px", height: "25px" }}
+                            ></lord-icon>
+                          </div>
+                          <span>{benefit}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
-                <div className="sidebar-widget sidebar-recent-posts">
+                <div className="sidebar-widget sidebar-category">
+                  <h3 className="sidebar-widget-title">Service Offers</h3>
+                  <div className="sidebar-widget-content">
+                    <ul>
+                      {service.offers.map((offer, index) => (
+                        <li key={index}>
+                          <div>
+                            <lord-icon
+                              src="https://cdn.lordicon.com/oqdmuxru.json"
+                              trigger="loop"
+                              colors="primary:#f2b021"
+                              style={{ width: "25px", height: "25px" }}
+                            ></lord-icon>
+                          </div>
+                          <span>{offer}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                <div className="sidebar-widget sidebar-category">
+                  <h3 className="sidebar-widget-title">How It Works</h3>
+                  <div className="sidebar-widget-content">
+                    <ul>
+                      {service.works.map((work, index) => (
+                        <li key={index}>
+                          <div>
+                            <lord-icon
+                              src="https://cdn.lordicon.com/oqdmuxru.json"
+                              trigger="loop"
+                              colors="primary:#f2b021"
+                              style={{ width: "25px", height: "25px" }}
+                            ></lord-icon>
+                          </div>
+                          <span>{work}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                {/* <div className="sidebar-widget sidebar-recent-posts">
                   <h3 className="sidebar-widget-title">Recent Posts</h3>
                   <div className="sidebar-widget-content">
                     {allServices.slice(0, 3).map((service) => (
@@ -231,7 +254,7 @@ const ServiceDetails = () => {
                       </div>
                     ))}
                   </div>
-                </div>
+                </div> */}
                 <div className="sidebar-widget text-center">
                   <div className="help-card-body">
                     <lord-icon

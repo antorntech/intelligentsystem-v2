@@ -2801,6 +2801,22 @@ select:-webkit-autofill:focus {
   font-family: "Montserrat", sans-serif;
 }
 
+.blog .sidebar .sidebar-category .sidebar-widget-content span {
+  font-size: 14px;
+  font-family: Sailec Light;
+}
+
+.blog .sidebar .sidebar-category .sidebar-widget-content ul {
+  margin-top: 15px;
+}
+
+.blog .sidebar .sidebar-category .sidebar-widget-content ul li {
+  display: flex;
+  align-items: start;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
 .blog .sidebar .sidebar-recent-posts .post {
   margin-bottom: 10px;
 }
