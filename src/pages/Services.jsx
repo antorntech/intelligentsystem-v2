@@ -53,14 +53,21 @@ const Services = () => {
       <section className="services section-animation">
         <div className="container">
           <div className="row">
-            {services.map((service) => (
-              <div className="col-lg-4 col-md-6 item">
+            {services.map((service, index) => (
+              <div key={index} className="col-lg-4 col-md-6 item">
                 <div className="nft-box">
                   <div className="nft-box-thumb">
                     <img className="img-fluid" src={service.banner} alt="" />
                     <div className="nft-box-btn-content">
                       <Link
-                        to={`/services/${service.id}`}
+                        to={{
+                          pathname: `/services/${service.title
+                            .replace(/\s+/g, "-")
+                            .toLowerCase()}`,
+                        }}
+                        state={{
+                          id: service.id,
+                        }}
                         className="nft-box-btn"
                       >
                         Read More <i className="fa fa-arrow-right"></i>
@@ -70,7 +77,16 @@ const Services = () => {
                   <div className="nft-box-content">
                     <div className="nft-box-title-wrap">
                       <h3 className="nft-box-title">
-                        <Link to={`/services/${service.id}`}>
+                        <Link
+                          to={{
+                            pathname: `/services/${service.title
+                              .replace(/\s+/g, "-")
+                              .toLowerCase()}`,
+                          }}
+                          state={{
+                            id: service.id,
+                          }}
+                        >
                           {service.title}
                         </Link>
                       </h3>

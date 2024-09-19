@@ -1,8 +1,13 @@
 import React from "react";
 import PageHeader from "../shared/PageHeader";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const SoftwareDetails = () => {
+  const location = useLocation();
+
+  // Access the id from location state
+  const { id } = location.state || {};
+
   const software = {
     title: "University Project Management System",
     image: "/images/collections/13.jpg",

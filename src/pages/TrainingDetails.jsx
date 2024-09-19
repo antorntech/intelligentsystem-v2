@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import PageHeader from "../shared/PageHeader";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import TrainingModules from "../trainingmodules/TrainingModules";
 
 const TrainingDetails = () => {
+  const location = useLocation();
+
+  // Access the id from location state
+  const { id } = location.state || {};
+
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleCollapse = (index) => {

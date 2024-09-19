@@ -1,8 +1,13 @@
 import React from "react";
 import PageHeader from "../shared/PageHeader";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const BlogDetails = () => {
+  const location = useLocation();
+
+  // Access the id from location state
+  const { id } = location.state || {};
+
   const blog = {
     title: "It’s the Great Chance to Invest in NFTs",
     image: "/images/blog/7.jpg",

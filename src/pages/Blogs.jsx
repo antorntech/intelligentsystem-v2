@@ -125,7 +125,14 @@ const Blogs = () => {
                                 <span className="cat">{blog.category}</span>
                                 <h3 className="post-title">
                                   <Link
-                                    to={`/blogs/${blog.id}`}
+                                    to={{
+                                      pathname: `/blogs/${blog.title
+                                        .replace(/\s+/g, "-")
+                                        .toLowerCase()}`,
+                                    }}
+                                    state={{
+                                      id: blog.id,
+                                    }}
                                     className="text-white"
                                   >
                                     {blog.title}

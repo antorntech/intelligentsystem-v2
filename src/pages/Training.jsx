@@ -79,7 +79,14 @@ const Training = () => {
                             />
                             <div className="nft-box-btn-content">
                               <Link
-                                to={`/training/${currentTraining.id}`}
+                                to={{
+                                  pathname: `/training/${currentTraining.title
+                                    .replace(/\s+/g, "-")
+                                    .toLowerCase()}`,
+                                }}
+                                state={{
+                                  id: currentTraining.id,
+                                }}
                                 className="nft-box-btn"
                               >
                                 Explore <i className="fa fa-arrow-right"></i>
@@ -89,7 +96,16 @@ const Training = () => {
                           <div className="nft-box-content">
                             <div className="nft-box-title-wrap d-flex align-items-center justify-content-between">
                               <h3 className="nft-box-title">
-                                <Link to={`/training/${currentTraining.id}`}>
+                                <Link
+                                  to={{
+                                    pathname: `/training/${currentTraining.title
+                                      .replace(/\s+/g, "-")
+                                      .toLowerCase()}`,
+                                  }}
+                                  state={{
+                                    id: currentTraining.id,
+                                  }}
+                                >
                                   {currentTraining.title}
                                 </Link>
                               </h3>
