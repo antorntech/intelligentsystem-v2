@@ -61,7 +61,14 @@ const HomePortfolio = () => {
                     <img className="img-fluid" src={software.banner} alt="" />
                     <div className="nft-box-btn-content">
                       <Link
-                        to={`/software/${software.id}`}
+                        to={{
+                          pathname: `/software/${software.title
+                            .replace(/\s+/g, "-")
+                            .toLowerCase()}`,
+                        }}
+                        state={{
+                          id: software.id,
+                        }}
                         className="nft-box-btn"
                       >
                         Explore <i className="fa fa-arrow-right"></i>
@@ -72,7 +79,14 @@ const HomePortfolio = () => {
                     <div className="nft-box-title-wrap d-flex align-items-center justify-content-between">
                       <h3 className="nft-box-title">
                         <Link
-                          to={`/software/${software.id}`}
+                          to={{
+                            pathname: `/software/${software.title
+                              .replace(/\s+/g, "-")
+                              .toLowerCase()}`,
+                          }}
+                          state={{
+                            id: software.id,
+                          }}
                           className="text-white"
                         >
                           {software.title}

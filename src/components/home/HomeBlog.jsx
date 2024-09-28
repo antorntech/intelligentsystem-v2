@@ -39,7 +39,10 @@ const HomeBlog = () => {
                         <a href="#0">Nftartwork</a>
                       </span>
                       <h3 className="post-title">
-                        <Link to="/blogs/1" className="text-white">
+                        <Link
+                          to="/blogs/how-to-create-your-1st-crypto-nfts"
+                          className="text-white"
+                        >
                           How to Create Your 1st Crypto NFTs
                         </Link>
                       </h3>
@@ -68,7 +71,10 @@ const HomeBlog = () => {
                         <a href="#0">Digitalart</a>
                       </span>
                       <h3 className="post-title">
-                        <Link to="/blogs/2" className="text-white">
+                        <Link
+                          to="/blogs/its-the-great-chance-to-invest-in-nfts"
+                          className="text-white"
+                        >
                           It’s the Great Chance to Invest in NFTs
                         </Link>
                       </h3>

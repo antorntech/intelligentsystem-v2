@@ -75,7 +75,16 @@ const HomeService = () => {
                   <div className="nft-box-content">
                     <div className="nft-box-title-wrap">
                       <h3 className="nft-box-title">
-                        <Link to={`/services/${service.id}`}>
+                        <Link
+                          to={{
+                            pathname: `/services/${service.title
+                              .replace(/\s+/g, "-")
+                              .toLowerCase()}`,
+                          }}
+                          state={{
+                            id: service.id,
+                          }}
+                        >
                           {service.title}
                         </Link>
                       </h3>
