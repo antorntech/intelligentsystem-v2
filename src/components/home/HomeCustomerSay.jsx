@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import useGet from "../../customhooks/useGet";
 
 function SampleNextArrow(props) {
   const { onClick } = props;
@@ -22,48 +23,49 @@ function SamplePrevArrow(props) {
 }
 
 const HomeCustomerSay = () => {
-  const reviews = [
-    {
-      id: 1,
-      name: "Mr. Kamal",
-      designation: "CEO",
-      image: "/images/customer-logo/1.png",
-      description:
-        "“ISSL are always accommodating our diverse needs and we feel like they are a part of our Company rather than an external supplier”",
-    },
-    {
-      id: 2,
-      name: "Mrs. Rotna",
-      designation: "CFO",
-      image: "/images/customer-logo/2.png",
-      description:
-        "“ISSL are always accommodating our diverse needs and we feel like they are a part of our Company rather than an external supplier”",
-    },
-    {
-      id: 3,
-      name: "Mr. Jakir",
-      designation: "CTO",
-      image: "/images/customer-logo/3.png",
-      description:
-        "“ISSL are always accommodating our diverse needs and we feel like they are a part of our Company rather than an external supplier”",
-    },
-    {
-      id: 4,
-      name: "Mr. Jamil",
-      designation: "CMO",
-      image: "/images/customer-logo/4.png",
-      description:
-        "“ISSL are always accommodating our diverse needs and we feel like they are a part of our Company rather than an external supplier”",
-    },
-    {
-      id: 5,
-      name: "Mr. Mohon",
-      designation: "COO",
-      image: "/images/customer-logo/5.png",
-      description:
-        "“ISSL are always accommodating our diverse needs and we feel like they are a part of our Company rather than an external supplier”",
-    },
-  ];
+  const { data: reviews, isLoading, error } = useGet("reviews");
+  // const reviews = [
+  //   {
+  //     id: 1,
+  //     name: "Mr. Kamal",
+  //     designation: "CEO",
+  //     image: "/images/customer-logo/1.png",
+  //     description:
+  //       "“ISSL are always accommodating our diverse needs and we feel like they are a part of our Company rather than an external supplier”",
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Mrs. Rotna",
+  //     designation: "CFO",
+  //     image: "/images/customer-logo/2.png",
+  //     description:
+  //       "“ISSL are always accommodating our diverse needs and we feel like they are a part of our Company rather than an external supplier”",
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "Mr. Jakir",
+  //     designation: "CTO",
+  //     image: "/images/customer-logo/3.png",
+  //     description:
+  //       "“ISSL are always accommodating our diverse needs and we feel like they are a part of our Company rather than an external supplier”",
+  //   },
+  //   {
+  //     id: 4,
+  //     name: "Mr. Jamil",
+  //     designation: "CMO",
+  //     image: "/images/customer-logo/4.png",
+  //     description:
+  //       "“ISSL are always accommodating our diverse needs and we feel like they are a part of our Company rather than an external supplier”",
+  //   },
+  //   {
+  //     id: 5,
+  //     name: "Mr. Mohon",
+  //     designation: "COO",
+  //     image: "/images/customer-logo/5.png",
+  //     description:
+  //       "“ISSL are always accommodating our diverse needs and we feel like they are a part of our Company rather than an external supplier”",
+  //   },
+  // ];
 
   const settings = {
     dots: false,
@@ -115,14 +117,17 @@ const HomeCustomerSay = () => {
               <h1>Our Customer Say</h1>
             </div>
             <Slider {...settings}>
-              {reviews.map((review) => (
-                <div className="home-customer-say-review" key={review.id}>
+              {reviews?.map((review) => (
+                <div className="home-customer-say-review" key={review._id}>
                   <div className="home-customer-say-review-box">
                     <div className="home-customer-say-review-image">
-                      <img src={review.image} alt={review.name} />
+                      <img
+                        src={`https://apiserver.intelligentsystems.com.bd/${review.logo}`}
+                        alt={review.name}
+                      />
                     </div>
                     <div className="home-customer-say-review-content">
-                      <p>{review.description}</p>
+                      <p>{review.comments}</p>
                       <h3>{review.name}</h3>
                       <h6>{review.designation}</h6>
                     </div>
