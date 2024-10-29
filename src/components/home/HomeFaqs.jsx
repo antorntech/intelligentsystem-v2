@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import useGet from "../../customhooks/useGet";
 
 const HomeFaqs = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -7,43 +8,45 @@ const HomeFaqs = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  const faqs = [
-    {
-      id: "collapseOne",
-      heading: "headingOne",
-      question: "What are the ISSL?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-    },
-    {
-      id: "collapseTwo",
-      heading: "headingTwo",
-      question: "How do I get ISSL?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-    },
-    {
-      id: "collapseThree",
-      heading: "headingThree",
-      question: "How can we buy and invest in ISSL?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-    },
-    {
-      id: "collapseFour",
-      heading: "headingFour",
-      question: "Where can we buy and sell ISSL?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-    },
-    {
-      id: "collapseFive",
-      heading: "headingFive",
-      question: "Who are the team behind the project?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-    },
-  ];
+  const { data: faqs, isLoading, error } = useGet("faqs");
+
+  // const faqs = [
+  //   {
+  //     id: "collapseOne",
+  //     heading: "headingOne",
+  //     question: "What are the ISSL?",
+  //     answer:
+  //       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+  //   },
+  //   {
+  //     id: "collapseTwo",
+  //     heading: "headingTwo",
+  //     question: "How do I get ISSL?",
+  //     answer:
+  //       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+  //   },
+  //   {
+  //     id: "collapseThree",
+  //     heading: "headingThree",
+  //     question: "How can we buy and invest in ISSL?",
+  //     answer:
+  //       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+  //   },
+  //   {
+  //     id: "collapseFour",
+  //     heading: "headingFour",
+  //     question: "Where can we buy and sell ISSL?",
+  //     answer:
+  //       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+  //   },
+  //   {
+  //     id: "collapseFive",
+  //     heading: "headingFive",
+  //     question: "Who are the team behind the project?",
+  //     answer:
+  //       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+  //   },
+  // ];
 
   return (
     <section className="faq">
@@ -74,23 +77,23 @@ const HomeFaqs = () => {
         <div className="row">
           <div className="col-12">
             <div id="accordion">
-              {faqs.map((faq, index) => (
-                <div key={faq.id} className="card active">
+              {faqs?.map((faq, index) => (
+                <div key={faq._id} className="card active">
                   <div className="card-header" id={faq.heading}>
                     <h5>
                       <button
                         className="btn btn-link"
                         data-toggle="collapse"
-                        data-target={"#" + faq.id}
+                        data-target={"#" + faq._id}
                         aria-expanded={activeIndex === index}
-                        aria-controls={faq.id}
+                        aria-controls={faq._id}
                       >
                         {faq.question}
                       </button>
                     </h5>
                   </div>
                   <div
-                    id={faq.id}
+                    id={faq._id}
                     className={`collapse ${
                       activeIndex === index ? "show" : ""
                     }`}

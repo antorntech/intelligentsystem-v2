@@ -1,24 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Loader from "../../loader/Loader";
+import useGet from "../../customhooks/useGet";
 
 const HomePortfolio = () => {
-  const softwares = [
-    {
-      id: 1,
-      title: "University Project Management System",
-      banner: "/images/collections/13.jpg",
-    },
-    {
-      id: 2,
-      title: "Hotel Project Management System",
-      banner: "/images/collections/14.jpg",
-    },
-    {
-      id: 3,
-      title: "Payroll Project Management System",
-      banner: "/images/collections/15.jpg",
-    },
-  ];
+  const { data: softwares, isLoading, error } = useGet("softwares");
+
+  if (isLoading) {
+    return (
+      <>
+        <Loader />
+      </>
+    );
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
   return (
     <>
       <section className="portfolio">
@@ -54,11 +52,15 @@ const HomePortfolio = () => {
             </div>
           </div>
           <div className="row">
-            {softwares.map((software) => (
-              <div key={software.id} className="col-lg-4 col-md-6 item">
+            {softwares?.map((software) => (
+              <div key={software._id} className="col-lg-4 col-md-6 item">
                 <div className="nft-box">
                   <div className="nft-box-thumb">
-                    <img className="img-fluid" src={software.banner} alt="" />
+                    <img
+                      className="img-fluid"
+                      src={`https://apiserver.intelligentsystems.com.bd${software.banner}`}
+                      alt=""
+                    />
                     <div className="nft-box-btn-content">
                       <Link
                         to={{
@@ -67,7 +69,7 @@ const HomePortfolio = () => {
                             .toLowerCase()}`,
                         }}
                         state={{
-                          id: software.id,
+                          id: software._id,
                         }}
                         className="nft-box-btn"
                       >
@@ -85,7 +87,7 @@ const HomePortfolio = () => {
                               .toLowerCase()}`,
                           }}
                           state={{
-                            id: software.id,
+                            id: software._id,
                           }}
                           className="text-white"
                         >

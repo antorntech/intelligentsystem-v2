@@ -1,12 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import useGet from "../../customhooks/useGet";
+import Loader from "../../loader/Loader";
 
 const HomeService = () => {
   const { data: services, isLoading, error } = useGet("services");
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <>
+        <Loader />
+      </>
+    );
   }
 
   if (error) {

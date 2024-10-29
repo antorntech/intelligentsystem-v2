@@ -1,82 +1,29 @@
 import React, { useEffect, useRef } from "react";
+import Loader from "../../loader/Loader";
+import useGet from "../../customhooks/useGet";
 
 const HomeSponsor = () => {
-  const logosRef = useRef(null);
+  const { data: sponsors, isLoading, error } = useGet("sponsors");
 
-  useEffect(() => {
-    // Duplicate the logos
-    const logosElement = logosRef.current;
-    if (logosElement) {
-      const copy = logosElement.cloneNode(true);
-      logosElement.parentNode.appendChild(copy);
-    }
-  }, []);
+  if (isLoading) {
+    return <Loader />;
+  }
 
-  const sponsors = [
-    {
-      id: 1,
-      name: "Sponsor 1",
-      image: "images/sponsors/sponsor-1.png",
-    },
-    {
-      id: 2,
-      name: "Sponsor 2",
-      image: "images/sponsors/sponsor-2.png",
-    },
-    {
-      id: 3,
-      name: "Sponsor 3",
-      image: "images/sponsors/sponsor-3.png",
-    },
-    {
-      id: 4,
-      name: "Sponsor 4",
-      image: "images/sponsors/sponsor-4.png",
-    },
-    {
-      id: 5,
-      name: "Sponsor 5",
-      image: "images/sponsors/sponsor-5.png",
-    },
-    {
-      id: 6,
-      name: "Sponsor 6",
-      image: "images/sponsors/sponsor-6.png",
-    },
-    {
-      id: 7,
-      name: "Sponsor 7",
-      image: "images/sponsors/sponsor-7.png",
-    },
-    {
-      id: 8,
-      name: "Sponsor 8",
-      image: "images/sponsors/sponsor-8.png",
-    },
-    {
-      id: 9,
-      name: "Sponsor 9",
-      image: "images/sponsors/sponsor-9.png",
-    },
-    {
-      id: 10,
-      name: "Sponsor 10",
-      image: "images/sponsors/sponsor-10.png",
-    },
-    {
-      id: 11,
-      name: "Sponsor 11",
-      image: "images/sponsors/sponsor-11.png",
-    },
-  ];
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
   return (
     <>
       <section className="sponsors">
         <div data-aos="fade-up" data-aos-duration="1000" className="container">
           <div className="sponsor-logos">
-            {sponsors.map((sponsor) => (
-              <div className="logos-slide" key={sponsor.id}>
-                <img src={sponsor.image} alt={sponsor.name} />
+            {sponsors?.map((sponsor) => (
+              <div className="logos-slide" key={sponsor._id}>
+                <img
+                  src={`https://apiserver.intelligentsystems.com.bd/${sponsor.banner}`}
+                  alt={sponsor.name}
+                />
               </div>
             ))}
           </div>

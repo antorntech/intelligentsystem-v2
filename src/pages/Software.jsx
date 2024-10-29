@@ -3,23 +3,6 @@ import PageHeader from "../shared/PageHeader";
 import { Link } from "react-router-dom";
 
 const Software = () => {
-  const portfolios = [
-    {
-      id: 1,
-      title: "University Project Management System",
-      banner: "/images/collections/13.jpg",
-    },
-    {
-      id: 2,
-      title: "Hotel Project Management System",
-      banner: "/images/collections/14.jpg",
-    },
-    {
-      id: 3,
-      title: "Payroll Project Management System",
-      banner: "/images/collections/15.jpg",
-    },
-  ];
   return (
     <>
       <PageHeader title="Software" />
