@@ -1,83 +1,52 @@
 import React, { useState, useEffect } from "react";
 import "./AnimatedSlider.css";
 import { Link } from "react-router-dom";
+import useGet from "../customhooks/useGet";
+import Loader from "../loader/Loader";
 
-// Sample slider images and texts
-const sliderData = [
-  {
-    image: "/images/1.jpg",
-    heading: "Innovative Cloud Solutions",
-    description:
-      "Transform your business with cutting-edge cloud technology. Our scalable solutions offer seamless integration, enhanced security, and the flexibility to adapt to your growing needs. Experience the future of cloud computing today.",
-  },
-  {
-    image: "/images/2.jpg",
-    heading: "Next-Gen AI Development",
-    description:
-      "Unlock the power of artificial intelligence with our advanced AI solutions. From machine learning to natural language processing, our expertise in AI technologies helps you gain valuable insights and drive innovation in your industry.",
-  },
-  {
-    image: "/images/3.jpg",
-    heading: "Robust Cybersecurity Services",
-    description:
-      "Protect your digital assets with our comprehensive cybersecurity services. We provide state-of-the-art solutions to safeguard your business from cyber threats, ensuring your data remains secure and your operations run smoothly.",
-  },
-];
-
-// Adjust this value to extend slide duration
 const AUTO_SLIDE_INTERVAL = 5000;
 
 const AnimatedSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { data: sliders, isLoading, error } = useGet("sliders");
 
+  // Move to the next slide
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % sliderData.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % sliders.length);
   };
 
+  // Move to the previous slide
   const prevSlide = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + sliderData.length) % sliderData.length
+      (prevIndex) => (prevIndex - 1 + sliders.length) % sliders.length
     );
   };
 
+  // Set up automatic slide interval
   useEffect(() => {
-    // Set up auto-slide interval
     const intervalId = setInterval(nextSlide, AUTO_SLIDE_INTERVAL);
+    return () => clearInterval(intervalId); // Cleanup on unmount
+  }, [sliders]);
 
-    // Clear interval on component unmount
-    return () => clearInterval(intervalId);
-  }, []);
+  // Render loading state
+  if (isLoading) {
+    return (
+      <>
+        <Loader />
+      </>
+    );
+  }
+
+  // Render error state
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   return (
     <div className="slider-container">
       <div className="slides-wrapper">
-        {sliderData.map((slide, index) => (
-          <div
-            key={index}
-            className={`slide ${
-              index === currentIndex ? "active" : "inactive"
-            }`}
-            style={{ backgroundImage: `url(${slide.image})` }}
-          >
-            <div
-              className={`slide-content ${
-                index === currentIndex ? "show" : ""
-              }`}
-            >
-              <h2 className="slide-heading banner-heading">{slide.heading}</h2>
-              <p className="slide-description">{slide.description}</p>
-              <Link to="/services" className="slide-button">
-                <span>Learn More</span>
-                <lord-icon
-                  src="https://cdn.lordicon.com/vduvxizq.json"
-                  trigger="loop"
-                  delay="2000"
-                  colors="primary:#ffffff"
-                  style={{ width: "30px", height: "30px" }}
-                ></lord-icon>
-              </Link>
-            </div>
-          </div>
+        {sliders?.map((slide, index) => (
+          <Slide key={index} slide={slide} isActive={index === currentIndex} />
         ))}
       </div>
       <button className="swiper-button-prev" onClick={prevSlide}>
@@ -86,6 +55,34 @@ const AnimatedSlider = () => {
       <button className="swiper-button-next" onClick={nextSlide}>
         <i className="fa fa-angle-right"></i>
       </button>
+    </div>
+  );
+};
+
+const BASE_URL = "https://apiserver.intelligentsystems.com.bd";
+
+const Slide = ({ slide, isActive }) => {
+  const backgroundImageUrl = `${BASE_URL}${slide.banner}`;
+
+  return (
+    <div
+      className={`slide ${isActive ? "active" : "inactive"}`}
+      style={{ backgroundImage: `url(${backgroundImageUrl})` }}
+    >
+      <div className={`slide-content ${isActive ? "show" : ""}`}>
+        <h2 className="slide-heading banner-heading">{slide.title}</h2>
+        <p className="slide-description">{slide.details}</p>
+        <Link to="/services" className="slide-button">
+          <span>Learn More</span>
+          <lord-icon
+            src="https://cdn.lordicon.com/vduvxizq.json"
+            trigger="loop"
+            delay="2000"
+            colors="primary:#ffffff"
+            style={{ width: "30px", height: "30px" }}
+          ></lord-icon>
+        </Link>
+      </div>
     </div>
   );
 };
