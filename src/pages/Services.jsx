@@ -1,63 +1,34 @@
 import React from "react";
 import PageHeader from "../shared/PageHeader";
 import { Link } from "react-router-dom";
+import Loader from "../loader/Loader";
+import useGet from "../customhooks/useGet";
 
 const Services = () => {
-  const services = [
-    {
-      id: 1,
-      title: "Skill Development Training",
-      banner: "/images/collections/7.jpg",
-      description:
-        "The Fourth Industrial Revolution (4IR) is characterized by the integration of digital, physical, and biological technolo...",
-    },
-    {
-      id: 2,
-      title: "Internet of Things",
-      banner: "/images/collections/8.jpg",
-      description:
-        "The Fourth Industrial Revolution (4IR) is characterized by the integration of digital, physical, and biological technolo...",
-    },
-    {
-      id: 3,
-      title: "Artificial Intelligence",
-      banner: "/images/collections/9.jpg",
-      description:
-        "The Fourth Industrial Revolution (4IR) is characterized by the integration of digital, physical, and biological technolo...",
-    },
-    {
-      id: 4,
-      title: "Research & Development",
-      banner: "/images/collections/10.jpg",
-      description:
-        "The Fourth Industrial Revolution (4IR) is characterized by the integration of digital, physical, and biological technolo...",
-    },
-    {
-      id: 5,
-      title: "Blockchain Application",
-      banner: "/images/collections/11.jpg",
-      description:
-        "The Fourth Industrial Revolution (4IR) is characterized by the integration of digital, physical, and biological technolo...",
-    },
-    {
-      id: 6,
-      title: "Software Development",
-      banner: "/images/collections/12.jpg",
-      description:
-        "The Fourth Industrial Revolution (4IR) is characterized by the integration of digital, physical, and biological technolo...",
-    },
-  ];
+  const { data: services, isLoading, error } = useGet("services");
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
   return (
     <>
       <PageHeader title="Services" />
       <section className="services section-animation">
         <div className="container">
           <div className="row">
-            {services.map((service, index) => (
+            {services?.map((service, index) => (
               <div key={index} className="col-lg-4 col-md-6 item">
                 <div className="nft-box">
                   <div className="nft-box-thumb">
-                    <img className="img-fluid" src={service.banner} alt="" />
+                    <img
+                      className="img-fluid"
+                      src={`https://apiserver.intelligentsystems.com.bd/${service.banner}`}
+                      alt=""
+                    />
                     <div className="nft-box-btn-content">
                       <Link
                         to={{
@@ -66,7 +37,7 @@ const Services = () => {
                             .toLowerCase()}`,
                         }}
                         state={{
-                          id: service.id,
+                          id: service._id,
                         }}
                         className="nft-box-btn"
                       >
@@ -84,7 +55,7 @@ const Services = () => {
                               .toLowerCase()}`,
                           }}
                           state={{
-                            id: service.id,
+                            id: service._id,
                           }}
                         >
                           {service.title}

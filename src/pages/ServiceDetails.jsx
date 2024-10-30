@@ -11,6 +11,8 @@ const ServiceDetails = () => {
 
   const { data: service, isLoading, error } = useGetDetails(`services/${id}`);
 
+  console.log(service);
+
   const [activeIndex, setActiveIndex] = useState(null);
   const toggleCollapse = (index) =>
     setActiveIndex(activeIndex === index ? null : index);
@@ -92,7 +94,7 @@ const SidebarWidget = ({ title, items }) => (
     <h3 className="sidebar-widget-title">{title}</h3>
     <div className="sidebar-widget-content">
       <ul>
-        {items.map((item, index) => (
+        {items?.map((item, index) => (
           <li key={index}>
             <div>
               <lord-icon

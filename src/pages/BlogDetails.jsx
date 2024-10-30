@@ -85,7 +85,7 @@ const BlogContent = ({ blog }) => {
               <ul className="tags-list list-unstyled">
                 {blog?.tags?.map((tag, index) => (
                   <li key={index}>
-                    <a href="/blogs">{tag}</a>
+                    <span>{tag}</span>
                   </li>
                 ))}
               </ul>
