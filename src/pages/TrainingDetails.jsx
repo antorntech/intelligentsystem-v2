@@ -1,256 +1,90 @@
 import React, { useState } from "react";
-import PageHeader from "../shared/PageHeader";
 import { Link, useLocation } from "react-router-dom";
+import PageHeader from "../shared/PageHeader";
 import TrainingModules from "../trainingmodules/TrainingModules";
+import useGetDetails from "../customhooks/useGetDetails";
+import useGet from "../customhooks/useGet";
+import Loader from "../loader/Loader"; // Ensure Loader is correctly imported
 
 const TrainingDetails = () => {
   const location = useLocation();
+  const { id } = location.state || {}; // Handle undefined state gracefully
 
-  // Access the id from location state
-  const { id } = location.state || {};
+  const { data: training, isLoading, error } = useGetDetails(`trainings/${id}`);
+  console.log(training);
+  const { data: allTrainings } = useGet("trainings");
 
-  const [activeIndex, setActiveIndex] = useState(null);
+  if (isLoading) return <Loader />;
+  if (error) return <div>Error: {error}</div>;
 
-  const toggleCollapse = (index) => {
-    setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
-  };
-
-  const service = {
-    title: "Skill Development Training",
-    image: "/images/collections/8.jpg",
-    author: "AM Antor",
-    date: "September 17, 2022",
-    category: "Skill Development Training",
-    benefits: [
-      "Learn from experienced professionals with real-world expertise.",
-      "Gain practical experience with interactive sessions and projects.",
-      "Choose from various course timings to fit your schedule.",
-      "Receive a recognized certificate upon completion to boost your resume.",
-    ],
-    offers: [
-      "Coding, data analysis, cybersecurity.",
-      "Team management, project leadership, communication.",
-      "Tailored programs for various industries.",
-    ],
-    works: [
-      "Select from a wide range of topics tailored to your goals.",
-      "Sign up through our easy-to-use online portal or contact our team.",
-      "Attend sessions, complete assignments, and engage with instructors.",
-      "Obtain your certificate upon successful completion of the course.",
-    ],
-  };
-
-  const allServices = [
-    {
-      id: 1,
-      title: "Skill Development Training",
-      banner: "/images/collections/7.jpg",
-      description:
-        "The Fourth Industrial Revolution (4IR) is characterized by the integration of digital, physical, and biological technolo...",
-    },
-    {
-      id: 2,
-      title: "Internet of Things",
-      banner: "/images/collections/8.jpg",
-      description:
-        "The Fourth Industrial Revolution (4IR) is characterized by the integration of digital, physical, and biological technolo...",
-    },
-    {
-      id: 3,
-      title: "Artificial Intelligence",
-      banner: "/images/collections/9.jpg",
-      description:
-        "The Fourth Industrial Revolution (4IR) is characterized by the integration of digital, physical, and biological technolo...",
-    },
-    {
-      id: 4,
-      title: "Research & Development",
-      banner: "/images/collections/10.jpg",
-      description:
-        "The Fourth Industrial Revolution (4IR) is characterized by the integration of digital, physical, and biological technolo...",
-    },
-    {
-      id: 5,
-      title: "Blockchain Application",
-      banner: "/images/collections/11.jpg",
-      description:
-        "The Fourth Industrial Revolution (4IR) is characterized by the integration of digital, physical, and biological technolo...",
-    },
-    {
-      id: 6,
-      title: "Software Development",
-      banner: "/images/collections/12.jpg",
-      description:
-        "The Fourth Industrial Revolution (4IR) is characterized by the integration of digital, physical, and biological technolo...",
-    },
-  ];
-
-  const categories = [
-    { id: 1, name: "Skill Development Training" },
-    { id: 2, name: "Internet of Things" },
-    { id: 3, name: "Artificial Intelligence" },
-    { id: 4, name: "Research & Development" },
-    { id: 5, name: "Blockchain Application" },
-    { id: 6, name: "Software Development" },
-  ];
   return (
     <>
       <PageHeader title="Training Details" />
       <section className="blog">
         <div className="container">
           <div className="row">
+            {/* Main Content Section */}
             <div className="col-lg-8">
               <div className="blog-single">
                 <div className="blog-item">
-                  {/* <!-- Post Image --> */}
                   <div className="blog-item-thumb">
                     <img
-                      src={service.image}
-                      alt=""
+                      src={`https://apiserver.intelligentsystems.com.bd${training?.banner}`}
+                      alt={training?.title || "Training Banner"}
                       width="100%"
                       height="500px"
                     />
                   </div>
-                  {/* <!-- Post Content --> */}
                   <div className="blog-item-content">
                     <div className="post-content">
-                      <h3 className="post-title">
-                        <div>{service.title}</div>
-                      </h3>
+                      <h3 className="post-title">{training?.title}</h3>
                     </div>
-                    <div className="author-info d-flex align-items-center">
-                      <div className="author-info-content">
-                        <h4 className="author-info-name">
-                          <div>{service.author}</div>
-                        </h4>
-                        <span className="post-date">{service.date}</span>
-                      </div>
+
+                    <div className="author-info-content">
+                      <h4 className="author-info-name">{training?.author}</h4>
+                      <span className="post-date">{training?.date}</span>
                     </div>
                     <div className="post-text">
-                      <p>
-                        Our Skill Development Training offers targeted programs
-                        to help you enhance your skills and advance your career.
-                        Whether you're looking to improve your technical
-                        abilities, leadership skills, or industry-specific
-                        knowledge, our courses are designed to meet your needs.
-                      </p>
+                      <p>{training?.details}</p>
                     </div>
+
                     <div className="more-details">
                       <blockquote>
                         <h4 style={{ fontSize: "18px", fontWeight: "600" }}>
                           Modules
                         </h4>
-                        <TrainingModules />
+                        <TrainingModules modules={training?.module} />
                       </blockquote>
                     </div>
-                    <div className="post-footer">
-                      <div className="post-tags">
-                        <h5>Tags</h5>
-                        <ul className="tags-list list-unstyled">
-                          <li>
-                            <span>web development</span>
+
+                    <div className="post-tags">
+                      <h5>Tags</h5>
+                      <ul className="tags-list list-unstyled d-flex mt-3">
+                        {training?.tags?.map((tag, index) => (
+                          <li key={index}>
+                            <span>{tag}</span>
                           </li>
-                          <li>
-                            <span>cyber security</span>
-                          </li>
-                          <li>
-                            <span>artificial intelligence</span>
-                          </li>
-                        </ul>
-                      </div>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            {/* Sidebar Section */}
             <div className="col-lg-4">
               <div className="sidebar">
-                <div className="sidebar-widget sidebar-category">
-                  <h3 className="sidebar-widget-title">Key Benefits</h3>
-                  <div className="sidebar-widget-content">
-                    <ul>
-                      {service.benefits.map((benefit, index) => (
-                        <li key={index}>
-                          <div>
-                            <lord-icon
-                              src="https://cdn.lordicon.com/oqdmuxru.json"
-                              trigger="loop"
-                              colors="primary:#f2b021"
-                              style={{ width: "25px", height: "25px" }}
-                            ></lord-icon>
-                          </div>
-                          <span>{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-                <div className="sidebar-widget sidebar-category">
-                  <h3 className="sidebar-widget-title">Service Offers</h3>
-                  <div className="sidebar-widget-content">
-                    <ul>
-                      {service.offers.map((offer, index) => (
-                        <li key={index}>
-                          <div>
-                            <lord-icon
-                              src="https://cdn.lordicon.com/oqdmuxru.json"
-                              trigger="loop"
-                              colors="primary:#f2b021"
-                              style={{ width: "25px", height: "25px" }}
-                            ></lord-icon>
-                          </div>
-                          <span>{offer}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-                <div className="sidebar-widget sidebar-category">
-                  <h3 className="sidebar-widget-title">How It Works</h3>
-                  <div className="sidebar-widget-content">
-                    <ul>
-                      {service.works.map((work, index) => (
-                        <li key={index}>
-                          <div>
-                            <lord-icon
-                              src="https://cdn.lordicon.com/oqdmuxru.json"
-                              trigger="loop"
-                              colors="primary:#f2b021"
-                              style={{ width: "25px", height: "25px" }}
-                            ></lord-icon>
-                          </div>
-                          <span>{work}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-                {/* <div className="sidebar-widget sidebar-recent-posts">
-                  <h3 className="sidebar-widget-title">Recent Posts</h3>
-                  <div className="sidebar-widget-content">
-                    {allServices.slice(0, 3).map((service) => (
-                      <div key={service.id} className="sidebar-post">
-                        <div className="post d-flex align-items-center">
-                          <div className="post-thumb">
-                            <Link to={`/services/${service.id}`}>
-                              <img src={service.banner} alt="" />
-                            </Link>
-                          </div>
-                          <div className="post-content">
-                            <h3 className="post-title">
-                              <Link to={`/services/${service.id}`}>
-                                {service.title}
-                              </Link>
-                            </h3>
-                            <div className="post-meta">
-                              <span>{service.date}</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div> */}
+                <SidebarWidget
+                  title="Key Benefits"
+                  items={training?.benefits}
+                />
+                <SidebarWidget
+                  title="Training Offers"
+                  items={training?.offers}
+                />
+                <SidebarWidget title="How It Works" items={training?.works} />
+
                 <div className="sidebar-widget text-center">
                   <div className="help-card-body">
                     <lord-icon
@@ -282,5 +116,27 @@ const TrainingDetails = () => {
     </>
   );
 };
+
+// Sidebar Widget Component
+const SidebarWidget = ({ title, items = [] }) => (
+  <div className="sidebar-widget sidebar-category">
+    <h3 className="sidebar-widget-title">{title}</h3>
+    <div className="sidebar-widget-content">
+      <ul>
+        {items?.map((item, index) => (
+          <li key={index} className="d-flex align-items-center">
+            <lord-icon
+              src="https://cdn.lordicon.com/oqdmuxru.json"
+              trigger="loop"
+              colors="primary:#f2b021"
+              style={{ width: "25px", height: "25px" }}
+            ></lord-icon>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+);
 
 export default TrainingDetails;

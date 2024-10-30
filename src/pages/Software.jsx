@@ -1,28 +1,37 @@
 import React from "react";
 import PageHeader from "../shared/PageHeader";
 import { Link } from "react-router-dom";
+import useGet from "../customhooks/useGet";
+import Loader from "../loader/Loader";
 
 const Software = () => {
+  const { data: softwares, isLoading, error } = useGet("softwares");
+  if (isLoading) return <Loader />;
+  if (error) return <div>Error: {error.message}</div>;
   return (
     <>
       <PageHeader title="Software" />
       <section className="services animate__animated animate__fadeIn">
         <div className="container">
           <div className="row">
-            {portfolios.map((portfolio) => (
-              <div className="col-lg-4 col-md-6 item">
+            {softwares?.map((software) => (
+              <div className="col-lg-4 col-md-6 item" key={software._id}>
                 <div className="nft-box">
                   <div className="nft-box-thumb">
-                    <img className="img-fluid" src={portfolio.banner} alt="" />
+                    <img
+                      className="img-fluid"
+                      src={`https://apiserver.intelligentsystems.com.bd/${software.banner}`}
+                      alt=""
+                    />
                     <div className="nft-box-btn-content">
                       <Link
                         to={{
-                          pathname: `/software/${portfolio.title
+                          pathname: `/software/${software.title
                             .replace(/\s+/g, "-")
                             .toLowerCase()}`,
                         }}
                         state={{
-                          id: portfolio.id,
+                          id: software._id,
                         }}
                         className="nft-box-btn"
                       >
@@ -35,15 +44,15 @@ const Software = () => {
                       <h3 className="nft-box-title">
                         <Link
                           to={{
-                            pathname: `/software/${portfolio.title
+                            pathname: `/software/${software.title
                               .replace(/\s+/g, "-")
                               .toLowerCase()}`,
                           }}
                           state={{
-                            id: portfolio.id,
+                            id: software._id,
                           }}
                         >
-                          {portfolio.title}
+                          {software.title}
                         </Link>
                       </h3>
                       <div className="nft-box-trending-icon">

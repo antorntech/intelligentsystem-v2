@@ -1,28 +1,50 @@
 import React, { useState } from "react";
 import PageHeader from "../shared/PageHeader";
 import { Link } from "react-router-dom";
+import useGet from "../customhooks/useGet";
+import Loader from "../loader/Loader";
 
 const Training = () => {
-  const alltrainings = [
-    {
-      id: 1,
-      title: "Responsive Website Development",
-      banner: "/images/trainings/training1.jpg",
-      price: "20,000",
-    },
-    {
-      id: 2,
-      title: "Mobile App Development with Flutter",
-      banner: "/images/trainings/training2.jpg",
-      price: "20,000",
-    },
-    {
-      id: 3,
-      title: "Cloud Computing Consultancy",
-      banner: "/images/trainings/training3.jpg",
-      price: "20,000",
-    },
-  ];
+  // Hooks are always called at the top level, no conditional returns before this
+  const { data: alltrainings, isLoading, error } = useGet("trainings");
+
+  const [searchTerm, setSearchTerm] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 6;
+
+  // Filter trainings based on the search term
+  const filteredTrainings = alltrainings?.filter((training) =>
+    training.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  // Pagination calculations
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentTrainings = filteredTrainings?.slice(
+    indexOfFirstPost,
+    indexOfLastPost
+  );
+
+  const totalPages = Math.ceil((filteredTrainings?.length || 0) / postsPerPage);
+
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+    setCurrentPage(1); // Reset to the first page on search
+  };
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  // Render loading, error, or the main content
+  if (isLoading) {
+    return <Loader />;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
   const categories = [
     { id: 1, name: "Web Development" },
     { id: 2, name: "App Development" },
@@ -31,32 +53,6 @@ const Training = () => {
     { id: 5, name: "Cyber Security" },
     { id: 6, name: "Data Science" },
   ];
-
-  const [searchTerm, setSearchTerm] = useState("");
-  const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 6;
-
-  const filteredTrainings = alltrainings.filter((blog) =>
-    blog.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentTrainings = filteredTrainings.slice(
-    indexOfFirstPost,
-    indexOfLastPost
-  );
-
-  const totalPages = Math.ceil(filteredTrainings.length / postsPerPage);
-
-  const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value);
-    setCurrentPage(1); // Reset to first page on search
-  };
-
-  const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
 
   return (
     <>
@@ -67,14 +63,17 @@ const Training = () => {
             <div className="col-lg-8">
               <div className="blog-items">
                 <div className="row">
-                  {currentTrainings.length > 0 ? (
-                    currentTrainings.map((currentTraining) => (
-                      <div className="col-lg-6 col-md-12 item">
+                  {currentTrainings?.length > 0 ? (
+                    currentTrainings?.map((currentTraining) => (
+                      <div
+                        className="col-lg-6 col-md-12 item"
+                        key={currentTraining._id}
+                      >
                         <div className="nft-box mb-4">
                           <div className="nft-box-thumb">
                             <img
                               className="img-fluid"
-                              src={currentTraining.banner}
+                              src={`https://apiserver.intelligentsystems.com.bd/${currentTraining.banner}`}
                               alt=""
                             />
                             <div className="nft-box-btn-content">
@@ -84,9 +83,7 @@ const Training = () => {
                                     .replace(/\s+/g, "-")
                                     .toLowerCase()}`,
                                 }}
-                                state={{
-                                  id: currentTraining.id,
-                                }}
+                                state={{ id: currentTraining._id }}
                                 className="nft-box-btn"
                               >
                                 Explore <i className="fa fa-arrow-right"></i>
@@ -102,9 +99,7 @@ const Training = () => {
                                       .replace(/\s+/g, "-")
                                       .toLowerCase()}`,
                                   }}
-                                  state={{
-                                    id: currentTraining.id,
-                                  }}
+                                  state={{ id: currentTraining._id }}
                                 >
                                   {currentTraining.title}
                                 </Link>
@@ -136,17 +131,16 @@ const Training = () => {
                     </div>
                   )}
                 </div>
-                {filteredTrainings.length > 0 && (
+                {filteredTrainings?.length > 0 && (
                   <div className="pagination">
                     <ul>
                       <li>
                         <a
                           href="#"
                           onClick={(e) => {
-                            e.preventDefault(); // Prevent the default anchor behavior
-                            if (currentPage > 1) {
+                            e.preventDefault();
+                            if (currentPage > 1)
                               handlePageChange(currentPage - 1);
-                            }
                           }}
                           className={currentPage <= 1 ? "disabled" : ""}
                         >
@@ -171,10 +165,9 @@ const Training = () => {
                         <a
                           href="#"
                           onClick={(e) => {
-                            e.preventDefault(); // Prevent the default anchor behavior
-                            if (currentPage < totalPages) {
+                            e.preventDefault();
+                            if (currentPage < totalPages)
                               handlePageChange(currentPage + 1);
-                            }
                           }}
                           className={
                             currentPage >= totalPages ? "disabled" : ""
@@ -188,6 +181,7 @@ const Training = () => {
                 )}
               </div>
             </div>
+
             <div className="col-lg-4">
               <div className="sidebar">
                 <div className="sidebar-widget sidebar-search">
@@ -209,39 +203,33 @@ const Training = () => {
                 </div>
                 <div className="sidebar-widget sidebar-category">
                   <h3 className="sidebar-widget-title">Category</h3>
-                  <div className="sidebar-widget-content">
-                    <ul>
-                      {categories.map((category) => (
-                        <li key={category.id}>
-                          <a href="/training">{category.name}</a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <ul>
+                    {categories.map((category) => (
+                      <li key={category.id}>
+                        <a href="/training">{category.name}</a>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
                 <div className="sidebar-widget sidebar-recent-posts">
                   <h3 className="sidebar-widget-title">Popular Training</h3>
-                  <div className="sidebar-widget-content">
-                    {alltrainings.slice(0, 3).map((training) => (
-                      <div key={training.id} className="sidebar-post">
-                        <div className="post d-flex align-items-center">
-                          <div className="post-thumb">
-                            <a href="/#">
-                              <img src={training.banner} alt="" />
-                            </a>
-                          </div>
-                          <div className="post-content">
-                            <h3 className="post-title">
-                              <a href="/#">{training.title}</a>
-                            </h3>
-                            <div className="post-meta">
-                              <span>৳ {training.price}</span>
-                            </div>
-                          </div>
+                  {alltrainings?.slice(0, 3).map((training) => (
+                    <div key={training._id} className="sidebar-post">
+                      <div className="post d-flex align-items-center">
+                        <div className="post-thumb">
+                          <a href="/#">
+                            <img src={training.banner} alt="" />
+                          </a>
+                        </div>
+                        <div className="post-content">
+                          <h3 className="post-title">
+                            <a href="/#">{training.title}</a>
+                          </h3>
+                          <span>৳ {training.price}</span>
                         </div>
                       </div>
-                    ))}
-                  </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
