@@ -48,7 +48,7 @@ const TrainingModules = ({ modules }) => {
             className={`accordion-label ${
               activeModuleId === module.id ? "open" : ""
             }`}
-            onClick={() => handleAccordionClick(module.id)}
+            onClick={() => handleAccordionClick(module._id)}
           >
             <span>
               <span className="module-number">{index + 1}</span> {module.title}
@@ -56,7 +56,7 @@ const TrainingModules = ({ modules }) => {
           </lavel>
           <div
             className={`accordion-content ${
-              activeModuleId === module.id ? "open" : ""
+              activeModuleId === module._id ? "open" : ""
             }`}
           >
             <p className="description">{module.description}</p>
